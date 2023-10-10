@@ -1,0 +1,244 @@
+---
+title: "Upstream User Guide and Technical Manual"
+author: ""
+date: "`r Sys.Date()`"
+output: rmarkdown::html_document
+fig_caption: yes
+classoption:
+- twocolumn
+
+---
+
+```{r setup, include = FALSE}
+```
+
+## {.tabset}
+
+### **Welcome**
+::: {.columns}
+::: {.column width="55%"}
+
+[Upstream](https://upstream-cloud-run-jcypjvvn7a-uw.a.run.app) is a easy-to-use, R Shiny application used for barrier culvert restoration planning in Western Washington. This vignette serves as a technical manual and overview of the app's functionality, and provides links to related data and technical resources.
+
+Select a tab above for additional detail on each feature.
+
+:::
+::: {.column width="5%"}
+:::
+::: {.column width="40%"}
+
+![](images/landing.jpg)
+
+:::
+:::
+
+
+### **Explore**
+#### **Explore**
+The Explore feature is meant to visualize and plot culvert attributes across various administrative and hydrological boundaries. 
+
+To begin, select the "Explore" tile on Upstream's landing page, or the tab by the same name. By default, the Explore feature displays the full WDFD culvert inventory for western Washington as of the latest Upstream update, filtered to exclude natural barriers and barriers upstream of natural barriers.
+
+#### ***Map Call-Outs***
+::: {.columns}
+::: {.column width="55%"}
+
+By zooming to an area of interest and click on a culvert (point). You'll see several useful pieces of information are available through callouts. These include:
+
+  * The culverts Site ID
+  * Passability
+  * Potential Fish Species
+  * Total Upstream Habitat
+  * Habitat to next barrier (marginal)
+  * Estimated Construction Cost
+  * Ownership
+  * The number of culverts corrected downstream by WSDOT
+  * The number of culverts corrected downstream by other than WSDOT
+  * Weather WSDOT Plans to correct that particular barrier
+  * The date the culvert was surveyed
+
+:::
+::: {.column width="5%"}
+:::
+::: {.column width="40%"}
+![](images/explore_callout.jpg)
+
+:::
+:::
+
+
+#### ***Area, Subarea, and Ownership***
+
+::: {.columns}
+::: {.column width="55%"}
+To begin drilling down into inventory data, use the drop-down and select Water Resource Inventory Areas (WRIAs) of interest. Multiple WRIAS can be selected, but be sure to deselect the All WRIAs before continuing with fewer than all WRIAs.
+
+Similarly, making selection(s) for ownership will restrict the resulting maps and figures to only include those types.
+
+:::
+::: {.column width="5%"}
+:::
+::: {.column width="40%"}
+![](images/explore_area.jpg)
+
+:::
+:::
+
+#### ***Select Variables For Plotting***
+
+Use this block of options to plot variables of interest as a frequency (histogram) or joint distribution (scatterplot). For example, one joint distribution of interest might be the length of blocked habitat as a function of the cost to repair culverts that are blocking it.
+
+To visualize, in the drop down menus:
+
+  1. Set Plot Type to "Scatterplot"
+  2. Make the Variable on X axis "Cost"
+  3. Make the Variable on Y axis "Full Habitat Length"
+  4. For style, select "Cost" as the fill color
+  
+You can "jitter" the points on the plot using the provided sliders.
+
+![](images/explore_graphopt.jpg){width=70%}
+
+#### ***Submit***
+
+Clicking "Submit" will provide two products:
+
+::: {.columns}
+::: {.column width="60%"}
+[insert image]
+:::
+::: {.column width="40%"}
+[insert image]
+
+:::
+:::
+***
+#### ***Other Metrics***
+[Additional Examples]
+
+### **Suggest**
+#### **Suggest**
+
+The Suggest feature returns a restoration plan that maximizes habitat, given the users budget, project area, and other constraints.
+
+#### ***Enter Budget***
+::: {.columns}
+::: {.column width="55%"}
+As with Upstream's Explore feature, WRIA's, sub-areas, and ownership type can be customized in Suggest to meet the needs of the user through a series of drop-down menus (see "Explore" tab section for more on this). For example, on the right we allow for Upstream to suggest culverts of all ownership types in all sub-areas within the Chambers-Clover WRIA only.
+
+Once an these fields are populated, provide the budget available for repairs in US dollars---such as 80000 in the example to the right.
+
+:::
+::: {.column width="5%"}
+:::
+::: {.column width="40%"}
+![](images/suggest.jpg)
+
+:::
+:::
+
+#### ***Submit***
+Without additional selections (see below), clicking "Submit" will provide two products:
+
+1. A map highlighting, in blue, barrier(s) that are estimated to unlock the most habitat for the user defined budget. selections here are based on [Recent research](https://www.sciencedirect.com/science/article/abs/pii/S0006320722002634) on regional repair costs, and uniform habitat quality.
+
+<p align="center">
+![](images/suggest_map.jpg){width=70%}
+</p>
+
+2. A report, matching projects on the map, that provides the summed habitat by fish species (if known), that is estimated to be repaired, along with estimated cost per barrier id within the plan.
+
+<p align="center">
+![](images/suggest_report.jpg){width=70%}
+</p>
+
+***
+#### ***Already Planned / Will Complete***
+In addition to spatial and administrative constraints, users can pass new information and customization to their Suggest analysis. 
+
+::: {.columns}
+::: {.column width="55%"}
+The Already Planned / Will Complete field allows users to include the ids of culverts they have either recently completed (but passibility is not reflected in the apps data), or have planned and budgeted for those repairs separately. In either case, including the culvert will remove the cost of its repair in the analysis, assume it is now passable, and suggest additional barriers within the users budget as before. 
+
+:::
+::: {.column width="5%"}
+:::
+::: {.column width="40%"}
+![](images/suggest_complete.jpg){width=70%}
+
+:::
+:::
+
+If you don't know the culvert id, but know their physical locations, simply navigate to those points on the map, click, and copy/paste the id from their call out into the Already Planned / Will Complete field.Once added, click the submit button again. 
+
+The Planned/Completed culverts as associated habitat will be shown in the map but ignored in the new report.
+
+
+::: {.columns}
+::: {.column width="55%"}
+![**Map Result**. Including the two culverts to the southwest as already planned / completed, and leaving budget the same, suggests a new third culvert to the northeast.](images/suggest_map_planned.jpg){width=30%}
+:::
+::: {.column width="5%"}
+:::
+::: {.column width="40%"}
+![**Report Result**. Only the unlocked habitat and cost of the new suggestion is given. Note that this particular stream had no species listed, but still reports the total linial gain.](images/suggest_report_planned.jpg)
+
+:::
+:::
+
+***
+#### ***Habitat Quantity Definition***
+[insert text figs]
+
+***
+
+#### ***Objective***
+[insert text figs]
+
+***
+
+#### ***Cost***
+[insert text figs]
+
+
+### **Custom**
+#### **Custom**
+The Custom feature provides estimated cost and habitat gained for a set of user defined projects.
+
+### **Data and Resources**
+#### **Data and Resources**
+In no particular order or importance
+
+**Culvert (points) Data**
+
+1. [WDFD Barrier Inventory](https://fortress.wa.gov/dfw/public/PublicDownload/habitat/FishPassage/)
+      + Last downloaded for app use: 9/1/23
+      + Filtered to exclude natural barriers and barriers upstream of natural barriers 
+      + Additional information and associated web maps [here](https://wdfw.wa.gov/species-habitats/habitat-recovery/fish-passage/assessment)
+ 
+2. [WSDOT Planned and Corrected Barrier inventories](https://gisdata-wsdot.opendata.arcgis.com/search?q=fish%20passage)
+      + Fish passage delivery plans
+          + [WSDOT - Fish Passage Delivery Plan Sites - 2021-2023](https://gisdata-wsdot.opendata.arcgis.com/datasets/WSDOT::wsdot-fish-passage-delivery-plan-sites-2021-2023/explore?location=47.740826%2C-122.909350%2C7.72)
+          + [WSDOT - Fish Passage Delivery Plan Sites - 2023-2025](https://gisdata-wsdot.opendata.arcgis.com/datasets/WSDOT::wsdot-fish-passage-delivery-plan-sites-2023-2025/explore?location=47.767383%2C-122.975750%2C7.71)
+          + [WSDOT - Fish Passage Delivery Plan Sites - 2025-2027](https://gisdata-wsdot.opendata.arcgis.com/datasets/WSDOT::wsdot-fish-passage-delivery-plan-sites-2025-2027/explore?location=47.763188%2C-122.871050%2C7.71)
+      + [WSDOT - Fish Passage Corrected Barriers Statewide](https://gisdata-wsdot.opendata.arcgis.com/datasets/WSDOT::wsdot-fish-passage-corrected-barriers-statewide/explore)
+           
+
+**Streams Data**
+
+1. [NHDPlus HR](https://www.usgs.gov/national-hydrography/nhdplus-high-resolution)
+      + Core flowline data, catchment data, and WDB HUC boundaries were downloaded programmatically using [nhdplusTools](https://doi-usgs.github.io/nhdplusTools/).
+
+**Cost Estimates**
+
+1. [Van Deynze et al 2022](https://www.sciencedirect.com/science/article/abs/pii/S0006320722002634)
+
+**Other**
+
+1. [Injunction Boundary](https://geo.wa.gov/datasets/fe5bc6ad319144478326336b04ab619f/about)
+      + Case area boundary for U. S. District Court Injunction No. C70-9213
+
+
+
+### **Technical**
+
