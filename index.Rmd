@@ -1,5 +1,5 @@
 ---
-title: "Upstream User Guide and Technical Manual"
+title: "Upstream User Guide"
 author: ""
 date: "`r Sys.Date()`"
 output: rmarkdown::html_document
@@ -18,7 +18,7 @@ classoption:
 ::: {.columns}
 ::: {.column width="55%"}
 
-[Upstream](https://upstream-cloud-run-jcypjvvn7a-uw.a.run.app) is a easy-to-use, R Shiny application used for barrier culvert restoration planning in Western Washington. This vignette serves as a technical manual and overview of the app's functionality, and provides links to related data and technical resources.
+[Upstream](https://upstream-cloud-run-jcypjvvn7a-uw.a.run.app) is an easy-to-use, R Shiny application used for barrier culvert restoration planning in Western Washington. This user guide provides an overview of Upstream's functionality along with documentation Upstream's data sources.
 
 Select a tab above for additional detail on each feature.
 
@@ -35,9 +35,9 @@ Select a tab above for additional detail on each feature.
 
 ### **Explore**
 #### **Explore**
-The Explore feature is meant to visualize and plot culvert attributes across various administrative and hydrological boundaries. 
+In Explore you can visualize culvert attributes across various administrative and hydrological boundaries. 
 
-To begin, select the "Explore" tile on Upstream's landing page, or the tab by the same name. By default, the Explore feature displays the full WDFD culvert inventory for western Washington as of the latest Upstream update, filtered to exclude natural barriers and barriers upstream of natural barriers.
+To begin, select the "Explore" tile on Upstream's landing page, or the tab by the same name. By default, the Explore feature displays the full WDFD culvert inventory for Western Washington as of the latest Upstream update, filtered to exclude culverts upstream of natural barriers.
 
 #### ***Map Call-Outs***
 ::: {.columns}
@@ -45,17 +45,17 @@ To begin, select the "Explore" tile on Upstream's landing page, or the tab by th
 
 By zooming to an area of interest and click on a culvert (point). You'll see several useful pieces of information are available through callouts. These include:
 
-  * The culverts Site ID
-  * Passability
-  * Potential Fish Species
-  * Total Upstream Habitat
-  * Habitat to next barrier (marginal)
-  * Estimated Construction Cost
-  * Ownership
-  * The number of culverts corrected downstream by WSDOT
-  * The number of culverts corrected downstream by other than WSDOT
-  * Weather WSDOT Plans to correct that particular barrier
-  * The date the culvert was surveyed
+  * The culvert Site ID (linked to the culvert report)
+  * Passability estimate (from WDFW)
+  * Potential fish species (from WDFW)
+  * Estimated total upstream habitat (Upstream estimate)
+  * Estimated habitat to next barrier (Upstream estimate)
+  * Estimated construction cost  (Upstream estimate)
+  * Ownership  (from WDFW)
+  * The number of downstream culverts corrected by WSDOT   (Upstream estimate)
+  * The number of downstream culverts corrected by a non-WSDOT entity   (Upstream estimate)
+  * Weather WSDOT Plans to correct the culvert (from WSDOT)
+  * The date the culvert was surveyed (from WDFW)
 
 :::
 ::: {.column width="5%"}
