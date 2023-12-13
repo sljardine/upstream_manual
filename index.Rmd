@@ -35,23 +35,22 @@ classoption:
 ::: {.column width="55%"}
 #### **Summary**
 
-Welcome to the Upstream User Guide! [Upstream](https://upstream-cloud-run-jcypjvvn7a-uw.a.run.app) is an intuitive and user-friendly R Shiny application designed for barrier culvert restoration planning in Western Washington. This guide serves as both a technical manual and a comprehensive overview of the app's functionalities, including its core features: Explore, Suggest, Custom, and Learn.
-
-Upstream is more than just a tool; it's a solution crafted to simplify complex planning processes in environmental restoration. Whether you're a seasoned expert or new to the field of barrier culvert restoration, this guide will help you harness the full potential of Upstream.
+Welcome to the Upstream User Guide! [Upstream](https://upstream-cloud-run-jcypjvvn7a-uw.a.run.app) is an intuitive and user-friendly R Shiny application designed to inform barrier culvert restoration prioritization in Western Washington. This guide serves as both a technical manual and a comprehensive overview of the app's functionalities, including its core features: Explore, Suggest, Custom, and Learn.
 
 In this guide, you'll find detailed explanations of each feature:
 
--   *Explore:* Delve into data and visualize culvert attributes across various boundaries.
+-   *Explore:* Delve into our data and visualize culvert attributes across various spatial and ownership boundaries.
 
--   *Suggest:* Receive tailored restoration plans based on your specific constraints and budget.
+-   *Suggest:* Receive tailored restoration plans based on your preferences and budget constraint.
 
 -   *Custom:* Create and assess the impact of your own set of restoration projects.
 
--   *Learn:* Learn about how to utilize the app its development.
+-   *Learn:* Learn about Upstream's data, project team, and user support.
 
-Our aim is to provide you with all the information you need to make informed decisions and streamline your planning process. With helpful tips, step-by-step instructions, and links to related resources, this guide is your comprehensive companion in utilizing Upstream effectively.
+With helpful tips, step-by-step instructions, and links to related resources, this guide is your comprehensive companion in utilizing Upstream effectively and interpreting 
+the results from the app.
 
-To get started, select a tab above for detailed insights into each of Upstream's unique features. Dive in and discover how Upstream can enhance your restoration planning experience!
+To get started, select a tab above for detailed insights into each of Upstream's unique features. 
 :::
 
 ::: {.column width="5%"}
@@ -134,13 +133,13 @@ If you require more details or have specific questions, we're here to help. Feel
 
 ::: columns
 ::: {.column width="55%"}
-The Explore feature is designed to visualize and plot culvert attributes across various administrative and hydrological boundaries.
+The Explore feature is designed to visualize culvert attributes across various spatial and ownership boundaries.
 
 ------------------------------------------------------------------------
 
 #### **Getting Started**
 
-Choose the 'Explore' tile on the Upstream landing page or select the corresponding tab. This feature automatically shows the entire WDFW culvert inventory for western Washington, updated to the latest version in Upstream. It filters out natural barriers and any barriers situated upstream of natural barriers.
+Choose the 'Explore' tile on the Upstream landing page or select the <span style="color:blue">some *corresponding tab* text</span>. This feature automatically displays a map of the [WDFW fish passage inventory](https://wdfw.wa.gov/species-habitats/habitat-recovery/fish-passage/assessment) for western Washington, updated with each new version of Upstream. It filters out natural barriers and any barriers situated upstream of natural barriers.
 :::
 
 ::: {.column width="5%"}
@@ -161,11 +160,10 @@ The interactive map in the Explore feature is a key component for visualizing cu
 
 -   **Zoom for Details:** At higher zoom levels, the map displays counts of culverts to manage the density of information. As you zoom in, individual culverts are revealed, allowing for more detailed examination.
 
--   **Click for Information:** Clicking on a culvert once it's visible on the map brings up a callout with crucial details such as Site ID, passability, potential fish species, and estimated construction cost.
+-   **Click for Information:** Clicking on a culvert once it's visible on the map brings up a callout with culvert data such as the WDFW site ID number, passability, potential fish species, and estimated habitat and construction cost.
 
--   **Filtering for Focus:** Utilize the dropdown menus to select specific Water Resource Inventory Areas (WRIAs) and ownership types. This tailors the map to show only the data relevant to your area of interest.
+-   **Filtering for Focus:** Utilize the dropdown menus to select culverts within specific WRIAs, HUC-12s, and ownership types. This tailors the map to show only the data relevant to your interests.
 
-This interactive map is designed to be user-friendly, providing an effective tool for analyzing culvert data and aiding in your restoration planning.
 :::
 
 ::: {.column width="5%"}
@@ -184,17 +182,21 @@ This interactive map is designed to be user-friendly, providing an effective too
 ::: {.column width="55%"}
 Zoom into your area of interest and click on a culvert to access detailed information. The callouts provide insights into:
 
--   The culverts Site ID
--   Passability
--   Potential Fish Species
--   Total Upstream Habitat
--   Habitat to next barrier (marginal)
--   Estimated Construction Cost
--   Ownership
--   The number of culverts corrected downstream by WSDOT
--   The number of culverts corrected downstream by other than WSDOT
--   Weather WSDOT Plans to correct that particular barrier
--   The date the culvert was surveyed
+-   The WDFW Site ID<sup>a</sup>
+-   Passability estimates<sup>a</sup>
+-   Potential fish species <sup>a</sup>
+-   Total habitat upstream of a culvert<sup>b</sup>
+-   Habitat upstream of a culvert to next barrier<sup>b</sup>
+-   Estimated construction cost<sup>b</sup>
+-   Ownership type<sup>a</sup>
+-   The number of culverts corrected downstream by WSDOT<sup>b</sup>
+-   The number of culverts corrected downstream by other than WSDOT<sup>b</sup>
+-   Weather WSDOT plans to correct that particular barrier<sup>b</sup>
+-   The date the culvert was surveyed<sup>a</sup> 
+
+<sup>a</sup> denotes variables from the WDFW inventory and <sup>b</sup> denotes
+Upstream variables.
+
 :::
 
 ::: {.column width="5%"}
@@ -219,6 +221,7 @@ To refine the inventory data, use the dropdown menu to select Water Resource Inv
 
 ::: {.column width="40%"}
 ![](images/explore_area.jpg)
+SHOULD ADD TEXT ON SUBAREA AND OWNERSHIP
 :::
 :::
 
@@ -246,7 +249,7 @@ Adjust the plot's appearance using the jitter sliders.
 Click "Submit" to generate two outputs:
 
 1.  An interactive map showcasing culverts within the selected area, subarea, and ownership.
-2.  A scatter plot illustrating the chosen characteristics.
+2.  A clickable scatter plot illustrating the chosen characteristics.
 
 Note: The 'Select Variable for Map' and 'Plot Fill Color' options enhance the visualization of the selected variable on both the map and scatter plot.
 :::
