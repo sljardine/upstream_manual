@@ -170,12 +170,11 @@ various spatial and ownership boundaries.
 #### **Getting Started**
 
 Choose the 'Explore' tile on the Upstream landing page or select the
-[some *corresponding tab* text]{style="color:blue"}. This feature
+the corresponding tab. This feature
 automatically displays a map of the [WDFW fish passage
 inventory](https://wdfw.wa.gov/species-habitats/habitat-recovery/fish-passage/assessment)
 for western Washington, updated with each new version of Upstream. It
-filters out natural barriers and any barriers situated upstream of
-natural barriers.
+filters out corrected barriers, natural barriers, and any barrier culverts situated upstream of natural barriers.
 :::
 
 ::: {.column width="5%"}
@@ -258,12 +257,6 @@ denotes Upstream variables.
 
 ::: columns
 ::: {.column width="65%"}
-Refining culverts based on Area, Subarea, and Ownership sets the benefit
-of any culvert outside the selection to 0. Although a culvert outside
-the selected area, subarea or ownership could still end up in the
-solution, especially if it is needed to restore the culvert outside to
-get any benefits at all as it is very possible another ownership type
-and area is critical. The tool will point this out.
 
 *Area*
 
@@ -275,8 +268,7 @@ ownership types will filter the maps and figures accordingly.
 *Subarea*
 
 The Subarea selector allows for further specification and will auto
-populate with subareas contained within the selected Areas after
-clicking the submit button at the bottom of the left panel.
+populate with subareas contained within the selected Areas.
 
 *Ownership*
 
@@ -305,7 +297,7 @@ repairs and the length of blocked habitat:
 1.  Set Plot Type to "Scatterplot".
 2.  Choose "Cost" for the X-axis variable.
 3.  Select "Full Habitat Length" for the Y-axis.
-4.  For style, use "Cost" as the fill color.
+4.  For style, use "Cost" as the fill color. [*let's give the example of color by the \# of downstream barriers*]{style="color:blue"}
 
 Adjust the plot's appearance using the jitter sliders.
 
@@ -315,7 +307,7 @@ Adjust the plot's appearance using the jitter sliders.
 
 #### **Highlight Barriers**
 
-The highlight barriers field allows specific culverts to be selected by their ID from the WDFW barrier inventory. This will highlight them specifically both on the map as well as on the scatterplot. 
+The highlight barriers field allows specific culverts to be selected by their ID from the WDFW barrier inventory. This will highlight them both on the map as well as in the plot. 
 
 ![](images/explore_highlight.jpg){style="width: 60%; display: block; margin-left: auto; margin-right: auto;"}
 
@@ -333,7 +325,7 @@ Click "Submit" to generate two outputs:
 
 Note: The 'Select Variable for Map' and 'Plot Fill Color' options
 enhance the visualization of the selected variable on both the map and
-scatter plot.
+scatter plot. [*the figure shown here should have the highlights*]{style="color:blue"}
 :::
 
 ::: {.column width="5%"}
@@ -359,18 +351,14 @@ scatter plot.
 
 ::: columns
 ::: {.column width="55%"}
-The Suggest feature returns a restoration plan that maximizes habitat,
-given the users budget, project area, and other constraints.
+The Suggest feature returns a restoration plan that maximizes a flexible objective, given the users budget, project area, and other constraints.
 
 ------------------------------------------------------------------------
 
 #### **Getting Started**
 
 To initiate the Suggest feature on the Upstream platform, simply select
-your project area, define your budget, and choose the culvert ownership
-types. This process, accessible in the Suggest section, is
-straightforward and user-friendly, allowing you to quickly set the
-parameters for your habitat restoration plan.
+your project area, the culvert ownership types of interest, define your objective, and provide a budget. This process, accessible in the Suggest section, is intended to be flexible and user-friendly, allowing you to quickly set parameters for your a suggested habitat restoration plan.
 :::
 
 ::: {.column width="5%"}
@@ -387,13 +375,8 @@ parameters for your habitat restoration plan.
 
 ::: columns
 ::: {.column width="65%"}
-As in Explore, culverts can be refined based on Area, Subarea, and
-Ownership sets the benefit of any culvert outside the selection to 0.
-Although a culvert outside the selected area, subarea or ownership could
-still end up in the solution, especially if it is needed to restore the
-culvert outside to get any benefits at all as it is very possible
-another ownership type and area is critical. The tool will point this
-out.
+In the Suggest feature, refining culverts based on Area, Subarea, and Ownership sets the benefit of any culvert outside the selection to zero. Note that a culvert outside the selected area, subarea or ownership could still end up in the suggested solution. This will happen if restoring culverts outside of the selection is required to achieve the greatest benefit within the solution. The tool will point this out.
+
 
 *Area*
 
@@ -405,15 +388,14 @@ ownership types will filter the maps and figures accordingly.
 *Subarea*
 
 The Subarea selector allows for further specification and will auto
-populate with subareas contained within the selected Areas after
-clicking the submit button at the bottom of the left panel.
+populate with subareas contained within the selected Areas.
 
 *Ownership*
 
 The Ownership selector filters the culverts based on their ownership as
 defined in the WDFW inventory. This includes City, County, Federal,
 Private, State, Tribal, Other, Port, Drainage District, Irrigation
-District, and Unknown.
+District, and Unknown. [*it would be nice to have the same system in the Explore and Suggest demos. I want to use the same one at the launch meeting, so let's spend some time picking one out.*]{style="color:blue"}
 :::
 
 ::: {.column width="5%"}
@@ -431,26 +413,20 @@ District, and Unknown.
 ::: columns
 ::: {.column width="55%"}
 In addition to spatial and administrative constraints, users can enhance
-their Suggest analysis by inputting new information and customizations.
+their Suggest analysis through providing data and customizing the objective.
 The 'Already Planned / Will Complete' field allows users to input the
 IDs of culverts that have either been recently completed (but whose
-passability is not yet reflected in the app's data) or are already
+corrected status is not yet reflected in the app's data) or are already
 planned and budgeted for repair separately. When you include these
 culverts, the analysis will not allocate any of your budget towards
 them. Instead, it will assume they are already fixed and passable,
 allowing the tool to suggest additional barriers for repair within your
 remaining budget.
 
-By marking these culverts as planned or completed, you effectively
-inform the planning tool to consider them as fixed assets in its
-optimization algorithm. This approach allows for more strategic planning
-and coordination around other known projects, ensuring that resources
-are allocated efficiently and effectively. The culverts marked as
-'Already Planned / Will Complete' will be excluded from the cost
-calculations in the analysis, but their associated habitat will still be
-displayed on the map for informational purposes. However, these culverts
-will be ignored in the generation of new reports to focus on the
-remaining barriers that require attention
+The culverts marked as
+'Already Planned / Will Complete' will be excluded from the estimated cost
+and habitat gains of a suggested plan, but their associated habitat will still be
+displayed on the map for informational purposes. 
 :::
 
 ::: {.column width="5%"}
@@ -464,7 +440,7 @@ remaining barriers that require attention
 Note: If you don't know the culvert id, but know their physical
 locations, simply navigate to those points on the map, click, and
 copy/paste the id from their call out into the Already Planned / Will
-Complete field.Once added, click the submit button again.
+Complete field. Once added, click the submit button again. [*why submit again?*]{style="color:blue"}
 
 ------------------------------------------------------------------------
 
@@ -482,9 +458,8 @@ relevant to that particular species.
 
 When a species is selected, the analysis adjusts to reflect the habitat
 suitability and passage requirements for that species. If a culvert does
-not provide habitat for the selected species, or if it's deemed
-unsuitable for passage, the benefit of modifying or repairing that
-culvert is set to 0 in the context of the selected species. This ensures
+not provide habitat for the selected species the benefit of modifying or repairing that
+culvert is set to zero in the context of the selected species. This ensures
 that the analysis and subsequent recommendations are specifically
 targeted to improve conditions for the species of interest, allowing for
 more effective and targeted conservation efforts.
@@ -507,8 +482,7 @@ utilized as outlined in [Bieger et al.
 
 #### **Objective**
 
-The Objective feature in Upstream provides a more comprehensive analysis
-of habitat quality. When selecting 'Weighted Attributes', the system
+The Objective feature in Upstream allows consideration of habitat quality. When selecting 'Weighted Attributes', the system
 incorporates various habitat quality metrics, building upon the chosen
 Habitat Quantity Metric.
 
@@ -516,21 +490,19 @@ This feature allows users to assign weights to different land use types
 within a 100-meter buffer surrounding the habitat. These land use
 categories, derived from the [National Landcover
 Dataset](https://www.mrlc.gov/data), include urban, agricultural, and
-natural areas. This weighting system enables users to make localized
-assessments of habitat quality based on land use. Note: Weights must sum
-to 1.
+natural areas. This weighting system enables users to obtain suggested plans with more or less focus on particular habitat types (e.g. more weight on forested habitat). Note: Weights must sum to 1.
 
 Additionally, the 'Ideal Habitat Temperature' option allows users to
 factor in temperature conditions, further refining the habitat quality
 analysis. For simplicity, August mean temperature is considered as it is
 a proxy for the max average monthly temperatures anadromous species are
-likely to encounter. The temperature values are pulled from the
+likely to encounter. The temperature values are taken from the
 NHDplusV2 and have been computed using a grid which combined the
 Parameter-elevation Regressions on Independent Slopes Model data
 [PRISM](http://www.prismclimate.org) for the period between 1971 and
 2000
 [Documentation](https://www.epa.gov/system/files/documents/2023-04/NHDPlusV2_User_Guide.pdf).
-Missing temperature values were interpolated using IDW with n.max = 10
+Missing temperature values were interpolated using **inverse distance weighting (IDW)** with n.max = 10
 while also including bank full width.
 
 It's important to note that temperature will act as a filter in the
@@ -547,21 +519,19 @@ to zero if the temperature is outside this range.
 In the Cost section of Upstream, users have the flexibility to input
 specific financial details for their projects. This feature is
 particularly useful for those who have precise cost information at their
-disposal. Cost estimates were initially established using methods
-described in [**Van Deynze et al
-2022**](https://www.sciencedirect.com/science/article/abs/pii/S0006320722002634).
-As these were 2019 costs, CPI is considered and used to adjust the
-estimates to the current year for inflation. Unknown costs are spatially
-interpolated using IDW.
+disposal. 
+
+-   **Default Modelled Cost Estimates:** For users without specific cost data, Upstream offers a default option that utilizes modeled cost estimates. These estimates are based on a comprehensive analysis of regional data and provide a reliable approximation for project budgeting. The modeled estimates are continually updated to reflect current economic conditions and provide a robust starting point for users who do not have access to specific cost data. 
+
+Specifically, our default cost estimates were predicted from the model described in [**Van Deynze et al
+2022**](https://www.sciencedirect.com/science/article/abs/pii/S0006320722002634). As predictions were made in 2019, we have adjusted the predictions for inflation to the year of the last Upstream release date. Further unknown costs are spatially
+interpolated using **inverse distance weighting (IDW)**.
 
 <img src="images/suggest_cost.jpg" style="width: 50%; display: block; margin-left: auto; margin-right: auto;"/>
 
--   **Provide Mean Project Cost:** Users can enter the average cost of either the design phase or the construction phase of their culvert projects. This input is invaluable for those who have detailed, project-specific financial data. The mean project cost provides a baseline for the design cost of the culvert. Additionally, construction costs are based on the regional averages as cited in the literature, which allows for the scaling of costs to adjust to the relevant project size and scope. This scaling is achieved by applying a ratio of the construction cost to the user's specific project costs, ensuring that estimates reflect the unique aspects of each project.
+-   **Provide Mean Project Cost:** Users can modify our default cost data in two ways. First, users can enter a design cost. Because our default cost estimates do not include design cost, the user-provided design costs will be added to our cost estimates. 
 
--   **Default Modelled Cost Estimates:** For users without specific cost data, Upstream offers a default option that utilizes modelled cost estimates. These estimates are based on a comprehensive analysis of regional data and provide a reliable approximation for project budgeting. The modelled estimates are continually updated to reflect current economic conditions and provide a robust starting point for users who do not have access to specific cost data.
-
-
-This dual approach to cost estimation ensures that users can tailor the financial aspects of their habitat restoration plans according to the level of detail they have, ensuring both accuracy and flexibility in project planning. By providing a mean project cost and allowing for the addition of average design costs, Upstream facilitates a comprehensive and adaptable framework for financial planning. The system's ability to scale costs according to specific project parameters ensures that users can make informed decisions that reflect both the scope of their projects and the nuances of regional cost factors.
+Second, users can provide a mean construction costs, which will be used to rescale our cost estimates multiplicatively. For example, if the user-provided mean cost is twice as much as the mean of our cost estimate for the entire case area, our cost estimates will be multiplied by 2.
 
 ------------------------------------------------------------------------
 
@@ -569,11 +539,13 @@ This dual approach to cost estimation ensures that users can tailor the financia
 
 ::: columns
 ::: {.column width="55%"}
-Once any of the prior fields are populated, provide the budget available for repairs in US dollars---such as 80000 in the example to the right.
+Users must provide a budget in US dollars---such as 80000 in the example to the right.
 
-For example, on the right we allow for Upstream to suggest
-culverts of all ownership types in all sub-areas within the
-Chambers-Clover WRIA only. All other fields were left unpopulated.
+For example, on the right we allow for Upstream to a suggest
+culvert restoration plan of all ownership types in all sub-areas within the Chambers-Clover WRIA. No further customization was made.
+
+Note that the suggested solution will not exceed the provided budget. Therefore, it is important to check whether the solution is subtantially changed by adding small amounts to the provided budget.
+
 
 :::
 
@@ -592,11 +564,7 @@ Chambers-Clover WRIA only. All other fields were left unpopulated.
 Without additional selections (see below), clicking "Submit" will
 provide two products:
 
-1.  A map highlighting, in blue, barrier(s) that are estimated to unlock
-    the most habitat for the user defined budget. selections here are
-    based on [Recent
-    research](https://www.sciencedirect.com/science/article/abs/pii/S0006320722002634)
-    on regional repair costs, and uniform habitat quality.
+1.  A map highlighting, in blue, barrier(s) that are estimated to unlock the most habitat for the user defined budget. 
 
 <p align="center">
 
@@ -604,9 +572,7 @@ provide two products:
 
 </p>
 
-2.  A report, matching projects on the map, that provides the summed
-    habitat by fish species (if known), that is estimated to be
-    repaired, along with estimated cost per barrier id within the plan.
+2.  A report, matching suggested projects on the map, that provides the  total estimated habitat gains, by fish species (if known), along with estimated cost per barrier id within the plan.
 
 <p align="center">
 
@@ -620,7 +586,7 @@ provide two products:
 
 ::: columns
 ::: {.column width="55%"}
-Map Results:
+Map Results: **left off here, but wondering if we should get rid of this**
 
 Including the two culverts to the southwest as already planned /
 completed, and leaving budget the same, suggests a new third culvert to
