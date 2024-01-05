@@ -725,6 +725,12 @@ participants.
 
 ------------------------------------------------------------------------
 
+#### **Bad Matches**
+
+Some culverts are well beyond a distance that allows them to be linked to any NHD line. We are in the process of considering how lidar burn-in lines might help address if these culverts are on unidentified or incorrectly assigned NHD lines. More details to come. 
+
+------------------------------------------------------------------------
+
 #### **Frequently Asked Questions (FAQ)**
 
 **Q1: What is Upstream?**
