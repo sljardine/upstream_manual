@@ -648,7 +648,32 @@ salmon species and overall, along with the estimated cost of the plan.
 
 #### **Demo**
 
-1.  Introduction This section can be used to describe potential use cases. 
+Like in the Explore and Suggest tabs, we will use Kennedy - Goldsborough as our selected area considering all HUC 12s. This time, however, we are going to only consider County owned culverts with no Already Planned / Will Complete. 
+
+Hypothetically, 5 culverts are selected for the custom plan. 
+
+<p align="center">
+
+<img src="images/custom_select.jpg" style="width: 60%; display: block; margin-left: auto; margin-right: auto;"/>
+
+</p>
+
+We now generate a map when we click submit that highlights our planned culverts in blue showing their location and the habitat that they open up. If a culvert has downstream barriers the habitat above will not be considered and will appear red as blocked. 
+
+<p align="center">
+
+<img src="images/custom_map.jpg" style="width: 60%; display: block; margin-left: auto; margin-right: auto;"/>
+
+</p>
+
+We also now have a report with the culverts estimated costs along with the total habitat gain and habitat per species. 
+
+<p align="center">
+
+<img src="images/custom_report.jpg" style="width: 60%; display: block; margin-left: auto; margin-right: auto;"/>
+
+</p>
+
 
 
 
@@ -667,10 +692,7 @@ salmon species and overall, along with the estimated cost of the plan.
 
 ::: columns
 ::: {.column width="55%"}
-The Learn feature is your comprehensive resource for understanding
-Upstream. It offers detailed background information about the app,
-insights into its development, and helpful guidance on how to navigate
-and utilize its features effectively.
+The Learn feature contains links to this manual as well as additional about the app. 
 
 ------------------------------------------------------------------------
 
