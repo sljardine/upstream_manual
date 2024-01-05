@@ -297,9 +297,9 @@ repairs and the length of blocked habitat:
 1.  Set Plot Type to "Scatterplot".
 2.  Choose "Cost" for the X-axis variable.
 3.  Select "Full Habitat Length" for the Y-axis.
-4.  For style, use "Cost" as the fill color. [*let's give the example of color by the \# of downstream barriers*]{style="color:blue"}
+4.  Additionally, we can visualize a third variable with the fill color. Here we will select "Count of Downstream Barriers".
 
-Adjust the plot's appearance using the jitter sliders.
+Adjust the plot's appearance using the jitter sliders to help visualize dots that are overlaid on top of each other.
 
 <img src="images/explore_graphopt.jpg" style="width: 80%; border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"/>
 
@@ -315,26 +315,20 @@ The highlight barriers field allows specific culverts to be selected by their ID
 
 #### **Submit and Visualization**
 
-::: columns
-::: {.column width="35%"}
 Click "Submit" to generate two outputs:
 
-1.  An interactive map showcasing culverts within the selected area,
-    subarea, and ownership.
-2.  A clickable scatter plot illustrating the chosen characteristics.
+1.  An interactive map showcasing culverts within the selected area (outlined in dark blue),
+    subarea, and ownership. Note that the highlighted culverts are outlined in bright, light blue. Clicking on the culverts in the map also will trigger a popup window displaying additional attributes. 
+    
+<img src="images/explore_highlightmap.jpg" style="width: 80%; display: block; margin-left: auto; margin-right: auto;"/>
+    
+2.  A clickable scatter plot illustrating the chosen characteristics. Again, if highlight barrier(s) is selected and barriers are added, then these will be circled as bright blue. 
+
+<img src="images/explore_highlightscatter.jpg" style="width: 80%; display: block; margin-left: auto; margin-right: auto;"/>
 
 Note: The 'Select Variable for Map' and 'Plot Fill Color' options
 enhance the visualization of the selected variable on both the map and
-scatter plot. [*the figure shown here should have the highlights*]{style="color:blue"}
-:::
-
-::: {.column width="5%"}
-:::
-
-::: {.column width="60%"}
-![](images/explore_color.jpg)
-:::
-:::
+scatter plot.
 
 ------------------------------------------------------------------------
 
@@ -395,7 +389,10 @@ populate with subareas contained within the selected Areas.
 The Ownership selector filters the culverts based on their ownership as
 defined in the WDFW inventory. This includes City, County, Federal,
 Private, State, Tribal, Other, Port, Drainage District, Irrigation
-District, and Unknown. [*it would be nice to have the same system in the Explore and Suggest demos. I want to use the same one at the launch meeting, so let's spend some time picking one out.*]{style="color:blue"}
+District, and Unknown. 
+
+*For example we are choosing the Kennedy - Goldsborough WRIA with all HUC 12s and all ownership types. 
+
 :::
 
 ::: {.column width="5%"}
@@ -440,7 +437,7 @@ displayed on the map for informational purposes.
 Note: If you don't know the culvert id, but know their physical
 locations, simply navigate to those points on the map, click, and
 copy/paste the id from their call out into the Already Planned / Will
-Complete field. Once added, click the submit button again. [*why submit again?*]{style="color:blue"}
+Complete field.
 
 ------------------------------------------------------------------------
 
@@ -539,12 +536,12 @@ Second, users can provide a mean construction costs, which will be used to resca
 
 ::: columns
 ::: {.column width="55%"}
-Users must provide a budget in US dollars---such as 80000 in the example to the right.
+Users must provide a budget in US dollars---such as 800000 in the example to the right.
 
 For example, on the right we allow for Upstream to a suggest
-culvert restoration plan of all ownership types in all sub-areas within the Chambers-Clover WRIA. No further customization was made.
+culvert restoration plan of all ownership types in all sub-areas within the Kennedy - Goldsborough WRIA. No further customization was made.
 
-Note that the suggested solution will not exceed the provided budget. Therefore, it is important to check whether the solution is subtantially changed by adding small amounts to the provided budget.
+Note that the suggested solution will not exceed the provided budget. Therefore, it is important to check whether the solution is substantially changed by adding small amounts to the provided budget.
 
 
 :::
@@ -568,7 +565,7 @@ provide two products:
 
 <p align="center">
 
-<img src="images/suggest_map.jpg" style="width: 80%; border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"/>
+<img src="images/suggest_map_result.jpg" style="width: 60%; display: block; margin-left: auto; margin-right: auto;"/>
 
 </p>
 
@@ -576,40 +573,38 @@ provide two products:
 
 <p align="center">
 
-<img src="images/suggest_report.jpg" style="width: 80%; border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"/>
+<img src="images/suggest_report.jpg" style="width: 60%; display: block; margin-left: auto; margin-right: auto;"/>
 
 </p>
 
 ------------------------------------------------------------------------
 
-#### **Example Results**
+#### **Example**
 
-::: columns
-::: {.column width="55%"}
-Map Results: **left off here, but wondering if we should get rid of this**
+Now let's consider prioritizing Chinook habitat, weighing urban habitat as .1, agricultural habitat as .2 and natural habitat as .7. The Already Planned / Will Complete will remain the same as in the previous example. 
 
-Including the two culverts to the southwest as already planned /
-completed, and leaving budget the same, suggests a new third culvert to
-the northeast, the map indicates potential habitat gains in blue with
-areas that will remain blocked in red.
-:::
 
-::: {.column width="5%"}
-:::
+<p align="center">
 
-::: {.column width="40%"}
-<img src="images/suggest_map_planned.jpg" style="width: 70%; border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"/>
-:::
-:::
+<img src="images/suggest_demo_additional.jpg" style="width: 60%; display: block; margin-left: auto; margin-right: auto;"/>
 
-Report Results:
+</p>
 
-Only the unlocked habitat and cost of the new suggestion is given. Note
-that this particular stream had no species listed, but still reports the
-total linial gain.
+In the new map, we see that overall habitat length as shown by the thick blue lines has decreased given these priorities. 
 
-<img src="images/suggest_report_planned.jpg" style="width: 90%; display: block; margin-left: auto; margin-right: auto;"/>
+<p align="center">
 
+<img src="images/suggest_chinook_map.jpg" style="width: 60%; display: block; margin-left: auto; margin-right: auto;"/>
+
+</p>
+
+We also see this in the report as the Total Habitat decreased yet Chinook habitat did increase under these priorities. 
+
+<p align="center">
+
+<img src="images/suggest_chinook_report.jpg" style="width: 60%; display: block; margin-left: auto; margin-right: auto;"/>
+
+</p>
 ------------------------------------------------------------------------
 
 ::: footer
@@ -653,8 +648,9 @@ salmon species and overall, along with the estimated cost of the plan.
 
 #### **Demo**
 
-1.  Introduction This section can be used to describe potential use
-    cases.
+1.  Introduction This section can be used to describe potential use cases. 
+
+
 
 ------------------------------------------------------------------------
 
