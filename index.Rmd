@@ -1004,7 +1004,7 @@ and reliability.
     These land types, following the [Anderson Land Cover Classification
     System](https://pubs.usgs.gov/pp/0964/report.pdf) are further
     simplified assigning classes 81 and 82 to "agriculture" and classes
-    21, 22, and 23 to "urban". All remaining classes then become
+    21, 22, 23 and 24 to "urban". All remaining classes then become
     categorized as "natural".
 :::
 
