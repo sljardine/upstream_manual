@@ -27,7 +27,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-Funding for Upstream comes from the Washington Sea Grant. Project Team consists of Sunny Jardine (Project lead, Lead developer), Robby Fonner (Project advisor), Dan Holland (Project advisor), Mark Scheuerell (Project advisor), Braeden Van Deynze (Project advisor), Connor Lewis Smith (Developer, IT), Jeffery Comnick (Developer), Logan Blair (Developer), J Kahn (Developer), Zephyr Pfotenhauer (Illustrator)
+Funding for Upstream comes from the Washington Sea Grant. Project Team consists of Sunny Jardine (Project lead, Lead developer), Robby Fonner (Project advisor), Dan Holland (Project advisor), Mark Scheuerell (Project advisor), Braeden Van Deynze (Project advisor), Connor Lewis-Smith (Developer, IT), Logan Blair (Developer), Andrew Cooke (Developer), Jeffery Comnick (Developer), J Kahn (Developer), Luke Rogers (Developer), Zephyr Pfotenhauer (Illustrator)
 
 ## Contact
 
