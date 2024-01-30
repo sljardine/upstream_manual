@@ -332,7 +332,7 @@ on the map as well as in the scatterplot.
 
 #### **Remove Bad Matches**
 
-The default selection is to remove bad matches, however, in this section the user can include bad matches in the data. Bad matches are those that were identified as not likely associated with an nhd line. 
+The default selection is to remove bad matches, however, in this section the user can include bad matches in the data. Bad matches are those that were identified as not likely associated with an NHD line. More info can be found in the Learn section of this manual. 
 
 ![](images/explore_bad_matches.jpg)
 
@@ -493,51 +493,15 @@ HUC 12s and all ownership types.
 :::
 
 ::: {.column width="30%"}
-![](images/explore_area.jpg)
+![](images/explore_area_selecter.jpg)
 :::
 :::
 
 ------------------------------------------------------------------------
 
-#### **Already Planned / Will Complete**
+#### **Select Species of Interest**
 
-::: columns
-::: {.column width="55%"}
-In addition to spatial and administrative constraints, users can enhance
-their Suggest analysis through providing data and customizing the
-objective. The 'Already Planned / Will Complete' field allows users to
-input the IDs of culverts that have either been recently completed (but
-whose corrected status is not yet reflected in the app's data) or are
-already planned and budgeted for repair separately. When you include
-these culverts, the analysis will not allocate any of your budget
-towards them. Instead, it will assume they are already fixed and
-passable, allowing the tool to suggest additional barriers for repair
-within your remaining budget.
-
-The culverts marked as 'Already Planned / Will Complete' will be
-excluded from the estimated cost and habitat gains of a suggested plan,
-but their associated habitat will still be displayed on the map for
-informational purposes.
-:::
-
-::: {.column width="5%"}
-:::
-
-::: {.column width="40%"}
-![](images/suggest_complete.jpg)
-:::
-:::
-
-Note: If you don't know the culvert id, but know their physical
-locations, simply navigate to those points on the map, click, and
-copy/paste the id from their call out into the Already Planned / Will
-Complete field.
-
-------------------------------------------------------------------------
-
-#### **Select Species**
-
-The 'Select Species' button allows users to tailor the analysis to
+The 'Select Species of Interest' button allows users to tailor the analysis to
 specific fish species of interest. The species options are derived from
 the Washington Department of Fish and Wildlife (WDFW) fish passage
 inventory and include the five Pacific salmon species (Chinook, Coho,
@@ -554,6 +518,48 @@ repairing that culvert is set to zero in the context of the selected
 species. This ensures that the analysis and subsequent recommendations
 are specifically targeted to improve conditions for the species of
 interest, allowing for more effective and targeted conservation efforts.
+
+------------------------------------------------------------------------
+
+#### **Select Projects to Ignore**
+
+::: columns
+::: {.column width="55%"}
+In addition to spatial and administrative constraints, users can enhance
+their Suggest analysis through providing data and customizing the
+objective. The 'Select Projects to Ignore' field allows users to
+input the IDs of culverts that have either been recently completed (but
+whose corrected status is not yet reflected in the app's data) or are
+already planned and budgeted for repair separately. When you include
+these culverts, the analysis will not allocate any of your budget
+towards them. Instead, it will assume they are already fixed and
+passable, allowing the tool to suggest additional barriers for repair
+within your remaining budget.
+
+The culverts marked as 'Select Projects to Ignore' will be
+excluded from the estimated cost and habitat gains of a suggested plan,
+but their associated habitat will still be displayed on the map for
+informational purposes as tan.
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="40%"}
+![](images/suggest_complete.jpg)
+:::
+:::
+
+Note: If you don't know the culvert id, but know their physical
+locations, simply navigate to those points on the map, click, and
+copy/paste the id from their call out into the Already Planned / Will
+Complete field.
+
+Below we can see an example of a solution within the Kennedy - Goldsborough WRIA with a project selected to ignore along with solutions in blue. 
+
+![](images/suggest_project_to_ignore.jpg)
+
+
 
 ------------------------------------------------------------------------
 
@@ -604,7 +610,7 @@ analysis. Users can set an ideal temperature range for the selected
 species, and the benefits of modifying or repairing a culvert will drop
 to zero if the temperature is outside this range.
 
-![](images/suggest_objective.jpg){style="width: 60%; display: block; margin-left: auto; margin-right: auto;"}
+![](images/suggest_objective.jpg)
 
 ------------------------------------------------------------------------
 
@@ -646,16 +652,20 @@ by 2.
 
 ------------------------------------------------------------------------
 
+#### **Remove Bad Matches**
+
+The default selection is to remove bad matches, however, in this section the user can include bad matches in the data. Bad matches are those that were identified as not likely associated with an NHD line. More info can be found in the Learn section of this manual. 
+
+![](images/explore_bad_matches.jpg)
+
+------------------------------------------------------------------------
+
 #### **Enter Budget**
 
 ::: columns
 ::: {.column width="55%"}
 Users must provide a budget in US dollars---such as 800000 in the
 example to the right.
-
-For example, on the right we allow for Upstream to a suggest culvert
-restoration plan of all ownership types in all sub-areas within the
-Kennedy - Goldsborough WRIA. No further customization was made.
 
 Note that the suggested solution will not exceed the provided budget.
 Therefore, it is important to check whether the solution is
@@ -678,7 +688,7 @@ Without additional selections (see below), clicking "Submit" will
 provide two products:
 
 1.  A map highlighting, in blue, barrier(s) that are estimated to unlock
-    the most habitat for the user defined budget.
+    the most habitat for the user defined budget. This is an example solution within the Kennedy - Goldsborough WRIA.
 
 <p align="center">
 
@@ -700,31 +710,36 @@ provide two products:
 
 #### **Example**
 
-Now let's consider prioritizing Chinook habitat, weighing urban habitat
-as .1, agricultural habitat as .2 and natural habitat as .7. The Already
-Planned / Will Complete will remain the same as in the previous example.
+Now let's consider prioritizing Coho habitat adjusting the Mean Design & Permitting Cost and the Mean Construction Cost to $500,000. We will also consider a budget of 6e6 within the Kennedy - Goldsborough WRIA for all ownership types. 
 
 <p align="center">
 
-<img src="images/suggest_demo_additional.jpg" style="width: 60%; display: block; margin-left: auto; margin-right: auto;"/>
+![](images/suggest_demo1.jpg)
 
 </p>
 
-In the new map, we see that overall habitat length as shown by the thick
-blue lines has decreased given these priorities.
+In the new map, we see that overall habitat length gained by this solution as shown by the thick
+blue lines. To see the details associated with the individual projects, we can view the Report tab.
 
 <p align="center">
 
-<img src="images/suggest_chinook_map.jpg" style="width: 60%; display: block; margin-left: auto; margin-right: auto;"/>
+![](images/suggest_demo2.jpg)
 
 </p>
 
-We also see this in the report as the Total Habitat decreased yet
-Chinook habitat did increase under these priorities.
+If we then consider solutions that only consider agricultural and natural surrounding landscape types and those with upstream temperatures below 17 degrees Celsius, we can do so by adjusting the Objectives inputs. Note: Here we set urban land cover to 0, therefore the other two land type weights must equal 1. We evenly weigh them as 0.5 and 0.5. 
 
 <p align="center">
 
-<img src="images/suggest_chinook_report.jpg" style="width: 60%; display: block; margin-left: auto; margin-right: auto;"/>
+![](images/suggest_demo3.jpg)
+
+</p>
+
+We now see that with those constraints much less habitat overall is open up and can find more details within the report. 
+
+<p align="center">
+
+![](images/suggest_demo4.jpg)
 
 </p>
 
@@ -769,38 +784,163 @@ salmon species and overall, along with the estimated cost of the plan.
 
 ------------------------------------------------------------------------
 
+#### **Area, Subarea, and Ownership**
+
+::: columns
+::: {.column width="65%"}
+As in the Explore and Suggest feature, we can refine culverts based on Area, Subarea, and
+Ownership setting the benefit of any culvert outside the selection to zero.
+Note that a culvert outside the selected area, subarea or ownership
+could still end up in the suggested solution. This will happen if
+restoring culverts outside of the selection is required to achieve the
+greatest benefit within the solution. The tool will point this out.
+
+*Area*
+
+To refine the inventory data, use the dropdown menu to select Water
+Resource Inventory Areas (WRIAs) of interest. For multiple selections,
+ensure 'All WRIAs' is deselected. Similarly, selecting specific
+ownership types will filter the maps and figures accordingly.
+
+*Subarea*
+
+The Subarea selector allows for further specification and will auto
+populate with subareas contained within the selected Areas.
+
+*Ownership*
+
+The Ownership selector filters the culverts based on their ownership as
+defined in the WDFW inventory. This includes City, County, Federal,
+Private, State, Tribal, Other, Port, Drainage District, Irrigation
+District, and Unknown.
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="30%"}
+![](images/explore_area_selecter.jpg)
+:::
+:::
+
+------------------------------------------------------------------------
+
+#### **Habitat Quantity Definition**
+
+As in the other features, habitat quantity can be quantified in terms of length, area, or volume. By default,
+length is used as the primary measure.
+
+![](images/suggest_hab_select.jpg){style="width: 30%; display: block; margin-left: auto; margin-right: auto;"}
+
+*Note:* For area and volume calculations, bankfull width and depth are
+utilized as outlined in [Bieger et al.
+2015](https://onlinelibrary.wiley.com/doi/abs/10.1111/jawr.12282).
+
+------------------------------------------------------------------------
+
+#### **Cost**
+
+As in the Suggest feature, users have the flexibility to input
+specific financial details for their projects. This feature is
+particularly useful for those who have precise cost information at their
+disposal.
+
+-   **Default Modelled Cost Estimates:** For users without specific cost
+    data, Upstream offers a default option that utilizes modeled cost
+    estimates. These estimates are based on a comprehensive analysis of
+    regional data and provide a reliable approximation for project
+    budgeting. The modeled estimates are continually updated to reflect
+    current economic conditions and provide a robust starting point for
+    users who do not have access to specific cost data.
+
+Specifically, our default cost estimates were predicted from the model
+described in [**Van Deynze et al
+2022**](https://www.sciencedirect.com/science/article/abs/pii/S0006320722002634).
+As predictions were made in 2019, we have adjusted the predictions for
+inflation to the year of the last Upstream release date. Further unknown
+costs are spatially interpolated using **inverse distance weighting
+(IDW)**.
+
+<img src="images/suggest_cost.jpg" style="width: 50%; display: block; margin-left: auto; margin-right: auto;"/>
+
+-   **Provide Mean Project Cost:** Users can modify our default cost
+    data in two ways. First, users can enter a design cost. Because our
+    default cost estimates do not include design cost, the user-provided
+    design costs will be added to our cost estimates.
+
+Second, users can provide a mean construction costs, which will be used
+to rescale our cost estimates multiplicatively. For example, if the
+user-provided mean cost is twice as much as the mean of our cost
+estimate for the entire case area, our cost estimates will be multiplied
+by 2.
+
+------------------------------------------------------------------------
+
+#### **Select Projects to Ignore**
+
+::: columns
+::: {.column width="55%"}
+Again, the 'Select Projects to Ignore' field allows users to
+input the IDs of culverts that have either been recently completed (but
+whose corrected status is not yet reflected in the app's data) or are
+already planned and budgeted for repair separately. When you include
+these culverts, the analysis will not allocate any of your budget
+towards them. Instead, it will assume they are already fixed and
+passable, allowing the tool to suggest additional barriers for repair
+within your remaining budget.
+
+The culverts marked as 'Select Projects to Ignore' will be
+excluded from the estimated cost and habitat gains of a suggested plan,
+but their associated habitat will still be displayed on the map for
+informational purposes as tan.
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="40%"}
+![](images/suggest_complete.jpg)
+:::
+:::
+
+------------------------------------------------------------------------
+
+#### **Enter ID(s) for Your Custom Plan**
+
+This is the field that allows you to enter culverts based on their IDs to view the estimated costs as well as the benefits. If you provided any constraints in the above fields, the culvert IDs will reflect them. Note: You must provide at least 1 culvert ID to generate an output within the Custom feature. 
+
+![](images/custom_enter_id.jpg)
+
+------------------------------------------------------------------------
+
+#### **Remove Bad Matches**
+
+The default selection is to remove bad matches, however, in this section the user can include bad matches in the data. Bad matches are those that were identified as not likely associated with an NHD line. More info can be found in the Learn section of this manual. 
+
+![](images/explore_bad_matches.jpg)
+
+------------------------------------------------------------------------
+
 #### **Demo**
 
 Like in the Explore and Suggest tabs, we will use Kennedy - Goldsborough
-as our selected area considering all HUC 12s. This time, however, we are
-going to only consider County owned culverts with no Already Planned /
-Will Complete.
-
-Hypothetically, 5 culverts are selected for the custom plan.
+as our selected area considering all HUC 12s and ownership types. We will provide the Mean Design & Permitting Cost and the Mean Construction Cost as $500,000 and the ID for the culvert will be 115 MC097, which we enter in the Enter ID(s) for Your Custom Plan field. 
 
 <p align="center">
 
-<img src="images/custom_select.jpg" style="width: 60%; display: block; margin-left: auto; margin-right: auto;"/>
+![](images/custom_demo1.jpg)
 
 </p>
 
 We now generate a map when we click submit that highlights our planned
-culverts in blue showing their location and the habitat that they open
-up. If a culvert has downstream barriers the habitat above will not be
-considered and will appear red as blocked.
+culvert in blue showing their location and the habitat that they open
+up. Since there is a downstream barrier, none of the habitat above the selected culvert appears blue as it is not opened up with this project alone. 
+
+However, if we know that the downstream culvert is already being corrected and will not need to be funded directly by our project, we can add it to the Select Projects to Ignore field. In this example, we will add 115 MC040 to the Select Projects to Ignore. Now we see in the solution that the habitat above our culvert is now considered accessible by being marked blue with the below habitat as tan. 
 
 <p align="center">
 
-<img src="images/custom_map.jpg" style="width: 60%; display: block; margin-left: auto; margin-right: auto;"/>
-
-</p>
-
-We also now have a report with the culverts estimated costs along with
-the total habitat gain and habitat per species.
-
-<p align="center">
-
-<img src="images/custom_report.jpg" style="width: 60%; display: block; margin-left: auto; margin-right: auto;"/>
+![](images/custom_demo2.jpg)
 
 </p>
 
@@ -856,9 +996,10 @@ participants.
 #### **Bad Matches**
 
 Some culverts are well beyond a distance that allows them to be linked
-to any NHD line. We are in the process of considering how lidar burn-in
-lines might help address if these culverts are on unidentified or
-incorrectly assigned NHD lines. More details to come.
+to any NHD line. We developed a machine learning solution considering lidar burn-in
+lines to help establish which culverts are beyond a confident match with a stream line. 
+
+Read more here: [View PDF](CulvertClassificationRandomForestModel_20240119_NRSIG.pdf)
 
 ------------------------------------------------------------------------
 
