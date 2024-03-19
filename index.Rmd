@@ -37,28 +37,25 @@ editor_options:
 #### **Overview**
 
 Welcome to the Upstream User Guide!
-[Upstream](https://upstream-cloud-run-jcypjvvn7a-uw.a.run.app) is an
-intuitive and user-friendly R Shiny application designed to inform
-barrier culvert restoration prioritization in Western Washington. This
+[Upstream](https://upstream-cloud-run-jcypjvvn7a-uw.a.run.app) is a flexible R Shiny application designed to inform
+fish passage planning efforts in Western Washington. This
 guide serves as both a technical manual and a comprehensive overview of
 the app's functionalities, including its core features: Welcome,
 Explore, Suggest, Custom, and Learn.
 
 In this guide, you'll find detailed explanations of each feature:
 
--   *Welcome:* Familiarize yourself with the culvert inventory.
+-   *Welcome:* Familiarize yourself with the barrier culverts included in our app.
 
 -   *Explore:* Delve into our data and visualize culvert attributes
-    across various spatial and ownership boundaries.
+    within various spatial and ownership boundaries.
 
--   *Suggest:* Receive tailored restoration plans based on your
-    preferences and budget constraint.
+-   *Suggest:* Generate restoration plans, which seek to maximize return on           investment, based on your preferences and budget constraint. 
 
 -   *Custom:* Create and assess the impact of your own set of
     restoration projects.
 
--   *Learn:* Learn about Upstream's data, project team, and user
-    support.
+-   *Learn:* Learn about Upstream's data inputs, the project team, and resources for user support.
 
 With helpful tips, step-by-step instructions, and links to related
 resources, this guide is your comprehensive companion in utilizing
@@ -96,7 +93,7 @@ well. Here's how to navigate and use it:
 
 -   **Click for Information:** Clicking on a culvert once it's visible
     on the map brings up a callout with culvert data such as the WDFW
-    site ID number, passability, potential fish species, and estimated
+    site ID number, a passability estimate, potential fish species, and estimated
     habitat and construction cost.
 :::
 
@@ -110,11 +107,11 @@ well. Here's how to navigate and use it:
 
 The default map on the right of the Welcome tab is the WDFW culvert
 inventory displayed within the Western Washington Case Area divided into
-WRIAs. Points with light gray boarders are those that we consider "Good
+WRIAs. Points with light gray borders are those that we consider "Good
 Matches", while those outlined in black are considered "Bad Matches".
 Clicking on the individual points allows access to view culvert
-attributes from the WDFW inventory, which includes a link to the
-culvert's site report link. If you are interested in learning more about
+attributes from the WDFW inventory, which includes a link to the culvert's
+WDFW Fish Passage and Diversion Screening Inventory Database (FPDSI) report. If you are interested in learning more about
 these data sets visit the **Data and Resources** tab of this manual.
 
 ------------------------------------------------------------------------
@@ -152,7 +149,7 @@ Us</a>
 
 ::: columns
 ::: {.column width="55%"}
-The Explore feature is designed to visualize culvert attributes across
+The Explore feature is designed to visualize culvert attributes within
 various spatial and ownership boundaries.
 
 ------------------------------------------------------------------------
@@ -163,9 +160,9 @@ Choose the 'Explore' tile on the Upstream landing page or select the the
 corresponding tab. This feature automatically displays a map of the
 [WDFW fish passage
 inventory](https://wdfw.wa.gov/species-habitats/habitat-recovery/fish-passage/assessment)
-for western Washington, updated with each new version of Upstream. It
-filters out corrected barriers, natural barriers, and any barrier
-culverts situated upstream of natural barriers.
+for Western Washington, updated with each new version of Upstream. It
+filters out corrected barriers, non-culvert barriers, and any barrier
+culverts situated upstream of [a] non-culvert barrier(s).
 :::
 
 ::: {.column width="5%"}
@@ -192,7 +189,7 @@ visualizing culvert data. Here's how to navigate and use it:
 
 -   **Click for Information:** Clicking on a culvert once it's visible
     on the map brings up a callout with culvert data such as the WDFW
-    site ID number, passability, potential fish species, and estimated
+    site ID number, a passability estimate, potential fish species, and estimated
     habitat and construction cost.
 
 -   **Filtering for Focus:** Utilize the dropdown menus to select
@@ -219,7 +216,7 @@ detailed information. The callouts provide insights into:
 
 -   The WDFW Site ID<sup>a</sup>
 -   Passability estimates<sup>a</sup>
--   Potential fish species <sup>a</sup>
+-   Potential fish species<sup>a</sup>
 -   Total habitat upstream of a culvert<sup>b</sup>
 -   Habitat upstream of a culvert to next barrier<sup>b</sup>
 -   Estimated construction cost<sup>b</sup>
@@ -248,17 +245,16 @@ denotes Upstream variables.
 
 ::: columns
 ::: {.column width="65%"}
+
 *Area*
 
 To refine the inventory data, use the dropdown menu to select Water
-Resource Inventory Areas (WRIAs) of interest. For multiple selections,
-ensure 'All WRIAs' is deselected. Similarly, selecting specific
-ownership types will filter the maps and figures accordingly.
+Resource Inventory Areas (WRIAs) of interest,
+making sure 'All WRIAs' is deselected. 
 
 *Subarea*
 
-The Subarea selector allows for further specification and will auto
-populate with subareas contained within the selected Areas.
+The Subarea selector allows for further spatial refinement, based on HUC12(s), and will auto-populate with subareas contained within the selected WRIA(s).
 
 *Ownership*
 
@@ -266,6 +262,7 @@ The Ownership selector filters the culverts based on their ownership as
 defined in the WDFW inventory. This includes City, County, Federal,
 Private, State, Tribal, Other, Port, Drainage District, Irrigation
 District, and Unknown.
+
 :::
 
 ::: {.column width="5%"}
@@ -280,7 +277,7 @@ District, and Unknown.
 
 #### **Defining Habitat Quantity Definition**
 
-Habitat quantity is a critical metric in environmental assessment and
+Habitat quantity is an important attribute for fish passage planning and
 can be quantified in terms of length, area, or volume. By default,
 length is used as the primary measure. All quality related habitat variables will subsequently be refined to only consider those weighted by the selected quantity definition. 
 
@@ -294,13 +291,13 @@ utilized as outlined in [Bieger et al.
 
 #### **Selecting Plot Type**
 
-Here you determine if you would like to view a scatterplot output of a histogram output depending on the selected culverts and attribute or attributes of interest. 
+With the plot type selection you can specify whether you would like to generate a scatterplot or a histogram from the selected culverts and attribute(s) of interest. Scatterplots are good for examining the relationship between two variables and histograms display the distribution of a single variable.
 
-Once plot type has been selected, you are prompted to select variables to display. If you select a histogram, you can select 1 variable and then the number of bins from 1 to 100 to visualize the variables distribution across the selected culverts. 
+Once plot type has been selected, you will be prompted to select variables to display. If you select a histogram, you will need to select one variable and the number of bins (from 1 to 100) to visualize the variable's distribution. 
 
 ![](images/explore_hist_select.jpg)
 
-If you select scatterplot, you will be prompted to select an X and a Y variable to display. As there can be overlap, a jitter option is the provided for both variables. 
+If you select scatterplot, you will be prompted to select an X and a Y variable to display. As there can be overlap between points in the scatterplot, a jitter option is provided for both variables. 
 
 ![](images/explore_jitter.jpg)
 
@@ -308,13 +305,11 @@ If you select scatterplot, you will be prompted to select an X and a Y variable 
 
 #### **Select Variable for Point Fill Color **
 
-Additionally, we can select variables to color the culvert points. This
-will color them on the generated plot, whether that is a scatterplot or
+Additionally, we can select a variable to define a color scheme for the culverts. This will color points on the plot, whether that is a scatterplot or
 a histogram, as well as on the interactive map. For continuous
-variables, colors are displayed based on the variables being grouped
-into 5 quantile ranges since many variables are skewed. If you refine
-your selection spatially or for ownership type, the quantile groups will
-then only reflect this refined range. 
+variables, colors are displayed based on the variable being grouped
+into 5 quantile ranges. If you refine
+your selection spatially or by ownership type, the quantile groups will then reflect the values within the refined selection of culverts. 
 
 ![](images/explore_color_select.jpg)
 
@@ -322,9 +317,7 @@ then only reflect this refined range.
 
 #### **Highlight Barriers**
 
-The highlight barriers field allows specific culverts to be selected by
-their ID from the WDFW barrier inventory. This will highlight them both
-on the map as well as in the scatterplot.
+To highlight specific culverts, you can select them by their WDFW site ID. This will highlight them both on the map as well as in the scatterplot.
 
 ![](images/explore_highlight.png)
 
@@ -332,7 +325,7 @@ on the map as well as in the scatterplot.
 
 #### **Remove Bad Matches**
 
-The default selection is to remove bad matches, however, in this section the user can include bad matches in the data. Bad matches are those that were identified as not likely associated with an NHD line. More info can be found in the Learn section of this manual. 
+The default selection is to filter out bad matches, however, in the user can choose to include bad matches in the data used to generate plots. Bad matches are those that were identified as not likely associated with a streamline in the NHDPlus HR dataset. More info can be found in the Learn section of this manual. 
 
 ![](images/explore_bad_matches.jpg)
 
@@ -343,14 +336,12 @@ The default selection is to remove bad matches, however, in this section the use
 Click "Submit" to generate two outputs:
 
 1.  An interactive map showcasing culverts within the selected area
-    (outlined in dark blue), subarea, and ownership. Note that any
-    highlighted culverts are outlined in bright, light blue. Clicking on
+    (outlined in dark blue), subarea, and ownership group. Note that any
+    highlighted culvert(s) will be outlined in aqua. Clicking on
     the culverts in the map also will trigger a popup window displaying
     additional attributes.
 
-2.  A clickable plot illustrating the chosen characteristics.
-    Again, if highlight barrier(s) is selected and barriers are added,
-    then these will be circled as bright blue within a scatterplot.
+2.  A clickable plot illustrating attribute(s) from culverts within the selected      area, subarea, and ownership group. Again, any highlighted culverts will be       outlined in aqua.
     
 ![](images/explore_submit.jpg)
 
@@ -358,8 +349,7 @@ Click "Submit" to generate two outputs:
 
 #### **Example**
 
-To demonstrate this tool, we will analyze the relationship between the temperature of all
-upstream habitat weighted by area and the area of all blocked habitat:
+To demonstrate this tool, we will analyze the relationship between the area-weighted mean temperature of all upstream habitat and the total area of upstream habitat (ignoring any upstrem culverts):
 
 1.  Select Habitat Quantity Definition as "Area".
 2.  Set Plot Type to "Scatterplot".
@@ -372,23 +362,20 @@ dots that are overlaid on top of each other.
 <img src="images/explore_scatter_settings.jpg" style="width: 60%; border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"/>
 
 After clicking submit a scatter plot is generated directly under the
-interactive map. From this example we see 2 groups of culverts: A
-relatively low temperature above and a relatively high temperature.
+interactive map. In this example, we see two groups of culverts with large levels of upstream habitat: a relatively low temperature group and a relatively high temperature group.
 
 <img src="images/explore_scatter.jpg" style="width: 60%; border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"/>
 
 
-
-Below is an example of if we fill
-in the points by selecting "Full Temperature (Area)" within the Select
+Below is an example of adding a color scheme to the scatterplot
+by selecting "Full Temperature (Area)" within the Select
 Variable for Point Fill Color.
 
 <img src="images/explore_color_selection.jpg" style="width: 80%; border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"/>
 
 ::: columns
 ::: {.column width="65%"}
-If we now refine the area by selecting a specific WRIA (Kennedy - Goldsborough), we can see that
-the quantile color has shifted in the scatterplot.
+If we now refine the area by selecting a specific WRIA (Kennedy - Goldsborough), we can see that the quantile color has shifted in the scatterplot, reflecting temperature ranges within the selected WRIA.
 :::
 
 ::: {.column width="5%"}
@@ -411,7 +398,7 @@ on the map as well as in the plot.
 
 ![](images/explore_entered_highlight.jpg)
 
-Using the examples in the Kennedy - Goldsborough WRIA, we select 115 MC205 since it is the outlier for Full Habitat Area. After hitting Submit again, we see this culvert highlighted in both the scatterplot and the interactive map in lightblue. 
+Using the examples in the Kennedy - Goldsborough WRIA, we select 115 MC205 since it is the outlier in terms of Full Habitat (Area). After hitting Submit again, we see this culvert highlighted in both the scatterplot and the interactive map in aqua. 
 
 ![](images/explore_selected_highlight_output.jpg){style="width: 70%; display: block; margin-left: auto; margin-right: auto;"}
 
@@ -431,18 +418,16 @@ Using the examples in the Kennedy - Goldsborough WRIA, we select 115 MC205 since
 
 ::: columns
 ::: {.column width="55%"}
-The Suggest feature returns a restoration plan that maximizes a flexible
-objective, given the users budget, project area, and other constraints.
+The Suggest feature returns a restoration plan that seeks to maximize return on investments, given your budget, project area and species of interest, and preferences for stream temperatures and habitat type. 
 
 ------------------------------------------------------------------------
 
 #### **Getting Started**
 
+
 To initiate the Suggest feature on the Upstream platform, simply select
-your project area, the culvert ownership types of interest, define your
-objective, and provide a budget. This process, accessible in the Suggest
-section, is intended to be flexible and user-friendly, allowing you to
-quickly set parameters for your a suggested habitat restoration plan.
+your project area of interest, ownership types of interest, define your
+objective, and provide a budget. 
 :::
 
 ::: {.column width="5%"}
@@ -459,24 +444,22 @@ quickly set parameters for your a suggested habitat restoration plan.
 
 ::: columns
 ::: {.column width="65%"}
-In the Suggest feature, refining culverts based on Area, Subarea, and
-Ownership sets the benefit of any culvert outside the selection to zero.
-Note that a culvert outside the selected area, subarea or ownership
+In the Suggest feature, refining culverts based on area, subarea, 
+ownership, and species sets the benefit of any culvert outside the selection to zero.
+Note that a culvert outside the selected area, subarea, ownership type, or species
 could still end up in the suggested solution. This will happen if
 restoring culverts outside of the selection is required to achieve the
-greatest benefit within the solution. The tool will point this out.
+greatest benefit within the selection. The tool will point this out.
 
 *Area*
 
 To refine the inventory data, use the dropdown menu to select Water
-Resource Inventory Areas (WRIAs) of interest. For multiple selections,
-ensure 'All WRIAs' is deselected. Similarly, selecting specific
-ownership types will filter the maps and figures accordingly.
+Resource Inventory Areas (WRIAs) of interest,
+making sure 'All WRIAs' is deselected. 
 
 *Subarea*
 
-The Subarea selector allows for further specification and will auto
-populate with subareas contained within the selected Areas.
+The Subarea selector allows for further spatial refinement, based on HUC12(s), and will auto-populate with subareas contained within the selected WRIA(s).
 
 *Ownership*
 
@@ -501,23 +484,15 @@ HUC 12s and all ownership types.
 
 #### **Select Species of Interest**
 
-The 'Select Species of Interest' button allows users to tailor the analysis to
-specific fish species of interest. The species options are derived from
-the Washington Department of Fish and Wildlife (WDFW) fish passage
-inventory and include the five Pacific salmon species (Chinook, Coho,
+Here, you can tailor your results to specific fish species of interest. The species options are derived from the Washington Department of Fish and Wildlife (WDFW) fish passage inventory and include the five Pacific salmon species (Chinook, Coho,
 Chum, Pink, and Sockeye) as well as Steelhead. By selecting a species,
-you can focus the analysis on the habitat needs and passage barriers
-relevant to that particular species.
+you can focus the restoration plan on habitat gains for a particular species.
 
 ![](images/suggest_species.jpg){style="width: 30%; display: block; margin-left: auto; margin-right: auto;"}
 
-When a species is selected, the analysis adjusts to reflect the habitat
-suitability and passage requirements for that species. If a culvert does
-not provide habitat for the selected species the benefit of modifying or
-repairing that culvert is set to zero in the context of the selected
-species. This ensures that the analysis and subsequent recommendations
-are specifically targeted to improve conditions for the species of
-interest, allowing for more effective and targeted conservation efforts.
+When a species is selected, the results focus on maximizing gains for that species. 
+If a culvert does not provide habitat for the selected species, the benefit of 
+restoring that culvert is set to zero. 
 
 ------------------------------------------------------------------------
 
@@ -526,20 +501,21 @@ interest, allowing for more effective and targeted conservation efforts.
 ::: columns
 ::: {.column width="55%"}
 In addition to spatial and administrative constraints, users can enhance
-their Suggest analysis through providing data and customizing the
-objective. The 'Select Projects to Ignore' field allows users to
-input the IDs of culverts that have either been recently completed (but
-whose corrected status is not yet reflected in the app's data) or are
-already planned and budgeted for repair separately. When you include
-these culverts, the analysis will not allocate any of your budget
-towards them. Instead, it will assume they are already fixed and
-passable, allowing the tool to suggest additional barriers for repair
-within your remaining budget.
+their Suggest results through providing data and customizing the
+objective to be maximized. 
+
+The 'Select Projects to Ignore' field allows users to
+input the WDFW site IDs of culverts that have either been recently completed (but
+whose corrected status is not yet reflected in the app's data), are
+already planned and budgeted for repair separately, or that you believe are incorrectly
+matched to a stream in the NHDPlus dataset. 
+
+When you select [a] project(s) to ignore, the analysis will not allocate any of your budget towards them. Instead, it will assume they are already fixed and/or
+passable, allowing the tool to allocate your budget to other project alternatives.
 
 The culverts marked as 'Select Projects to Ignore' will be
 excluded from the estimated cost and habitat gains of a suggested plan,
-but their associated habitat will still be displayed on the map for
-informational purposes as tan.
+but the culvert(s) and its (their) marginal upstream habitat will displayed on the map for informational purposes in a tan color.
 :::
 
 ::: {.column width="5%"}
@@ -550,12 +526,9 @@ informational purposes as tan.
 :::
 :::
 
-Note: If you don't know the culvert id, but know their physical
-locations, simply navigate to those points on the map, click, and
-copy/paste the id from their call out into the Already Planned / Will
-Complete field.
+Note: If you don't know the culvert's WDFW site id, simply navigate to those points on the map, click, and copy/paste the site id from their call out into the Already Planned / Will Complete field.
 
-Below we can see an example of a solution within the Kennedy - Goldsborough WRIA with a project selected to ignore along with solutions in blue. 
+Below we can see an example of a solution within the Kennedy - Goldsborough WRIA with a project selected to ignore along with suggested restoration plan (points) in light blue points and estimated habiat gains (lines) in dark blue. Culverts not in the plan, and associated blocked habitat, are displayed in red. 
 
 ![](images/suggest_project_to_ignore.jpg)
 
@@ -565,9 +538,9 @@ Below we can see an example of a solution within the Kennedy - Goldsborough WRIA
 
 #### **Habitat Quantity Definition**
 
-Habitat quantity is a critical metric in environmental assessment and
+Habitat quantity is an important attribute for fish passage planning and
 can be quantified in terms of length, area, or volume. By default,
-length is used as the primary measure.
+length is used as the primary measure. 
 
 ![](images/suggest_hab_select.jpg){style="width: 30%; display: block; margin-left: auto; margin-right: auto;"}
 
@@ -579,23 +552,19 @@ utilized as outlined in [Bieger et al.
 
 #### **Objective**
 
-The Objective feature in Upstream allows consideration of habitat
+The Objective option in Upstream allows consideration of habitat
 quality. When selecting 'Weighted Attributes', the system incorporates
-various habitat quality metrics, building upon the chosen Habitat
-Quantity Metric.
+preferences for habitat type and  stream temperature.
 
-This feature allows users to assign weights to different land use types
-within a 100-meter buffer surrounding the habitat. These land use
-categories, derived from the [National Landcover
+First, this option allows you to assign weights to different land use types
+within a 100-meter buffer surrounding the streams upstream of a given culvert. These land use categories, derived from the [National Landcover
 Dataset](https://www.mrlc.gov/data), include urban, agricultural, and
 natural areas. This weighting system enables users to obtain suggested
 plans with more or less focus on particular habitat types (e.g. more
-weight on forested habitat). Note: Weights must sum to 1.
+weight on natural habitat). Note: Weights must sum to 1.
 
 Additionally, the 'Ideal Habitat Temperature' option allows users to
-factor in temperature conditions, further refining the habitat quality
-analysis. For simplicity, August mean temperature is considered as it is
-a proxy for the max average monthly temperatures anadromous species are
+factor in temperature conditions. For simplicity, August mean temperature is considered as it is a proxy for the max average monthly temperatures anadromous species are
 likely to encounter. The temperature values are taken from the NHDplusV2
 and have been computed using a grid which combined the
 Parameter-elevation Regressions on Independent Slopes Model data
@@ -607,8 +576,8 @@ weighting (IDW)** with n.max = 10 while also including bank full width.
 
 It's important to note that temperature will act as a filter in the
 analysis. Users can set an ideal temperature range for the selected
-species, and the benefits of modifying or repairing a culvert will drop
-to zero if the temperature is outside this range.
+species, and the benefits of restoring a culvert will be set to zero
+if the temperature is outside this range.
 
 ![](images/suggest_objective.jpg)
 
@@ -616,18 +585,13 @@ to zero if the temperature is outside this range.
 
 #### **Cost**
 
-In the Cost section of Upstream, users have the flexibility to input
-specific financial details for their projects. This feature is
-particularly useful for those who have precise cost information at their
+In the Cost option of Suggest, users can provide financial parameters. This feature is
+particularly useful for those who have good cost estimates at their
 disposal.
 
 -   **Default Modelled Cost Estimates:** For users without specific cost
     data, Upstream offers a default option that utilizes modeled cost
-    estimates. These estimates are based on a comprehensive analysis of
-    regional data and provide a reliable approximation for project
-    budgeting. The modeled estimates are continually updated to reflect
-    current economic conditions and provide a robust starting point for
-    users who do not have access to specific cost data.
+    estimates. These predicted cost were modled from regional data. They only include       construction costs.
 
 Specifically, our default cost estimates were predicted from the model
 described in [**Van Deynze et al
@@ -647,14 +611,14 @@ costs are spatially interpolated using **inverse distance weighting
 Second, users can provide a mean construction costs, which will be used
 to rescale our cost estimates multiplicatively. For example, if the
 user-provided mean cost is twice as much as the mean of our cost
-estimate for the entire case area, our cost estimates will be multiplied
+estimate, for the entire Case Area, our cost estimates will be multiplied
 by 2.
 
 ------------------------------------------------------------------------
 
 #### **Remove Bad Matches**
 
-The default selection is to remove bad matches, however, in this section the user can include bad matches in the data. Bad matches are those that were identified as not likely associated with an NHD line. More info can be found in the Learn section of this manual. 
+The default selection is to filter out bad matches, however, in the user can choose to include bad matches in the data used to generate plots. Bad matches are those that were identified as not likely associated with a streamline in the NHDPlus HR dataset. More info can be found in the Learn section of this manual. 
 
 ![](images/explore_bad_matches.jpg)
 
@@ -665,7 +629,8 @@ The default selection is to remove bad matches, however, in this section the use
 ::: columns
 ::: {.column width="55%"}
 Users must provide a budget in US dollars---such as 800000 in the
-example to the right.
+example to the right. Scientific notation can also be used, e.g., 60 million
+dollars can be written as 60e6.
 
 Note that the suggested solution will not exceed the provided budget.
 Therefore, it is important to check whether the solution is
@@ -687,7 +652,7 @@ substantially changed by adding small amounts to the provided budget.
 Without additional selections (see below), clicking "Submit" will
 provide two products:
 
-1.  A map highlighting, in blue, barrier(s) that are estimated to unlock
+1.  A map highlighting, in light blue, barrier(s) that are estimated to unlock
     the most habitat for the user defined budget. This is an example solution within the Kennedy - Goldsborough WRIA.
 
 <p align="center">
@@ -696,9 +661,9 @@ provide two products:
 
 </p>
 
-2.  A report, matching suggested projects on the map, that provides the
-    total estimated habitat gains, by fish species (if known), along
-    with estimated cost per barrier id within the plan.
+2.  A report, on the suggested projects in the plan, providing
+    total estimated habitat gains, by fish species (if known) and habitat type, 
+    along a list of barriers in the plan and their cost estimate (reflecting user           modifications).
 
 <p align="center">
 
@@ -710,7 +675,7 @@ provide two products:
 
 #### **Example**
 
-Now let's consider prioritizing Coho habitat adjusting the Mean Design & Permitting Cost and the Mean Construction Cost to $500,000. We will also consider a budget of 6e6 within the Kennedy - Goldsborough WRIA for all ownership types. 
+Now let's consider prioritizing Coho habitat adjusting the Mean Design & Permitting Cost and the Mean Construction Cost to $500,000. We will also consider a budget of 6 million, or 6e6, within the Kennedy - Goldsborough WRIA for all ownership types. 
 
 <p align="center">
 
@@ -718,8 +683,7 @@ Now let's consider prioritizing Coho habitat adjusting the Mean Design & Permitt
 
 </p>
 
-In the new map, we see that overall habitat length gained by this solution as shown by the thick
-blue lines. To see the details associated with the individual projects, we can view the Report tab.
+In the map generated from this request, we see that overall habitat length gained by this solution as shown by the dark blue lines. To see the details associated with the individual projects, we can view the Report tab.
 
 <p align="center">
 
@@ -727,7 +691,8 @@ blue lines. To see the details associated with the individual projects, we can v
 
 </p>
 
-If we then consider solutions that only consider agricultural and natural surrounding landscape types and those with upstream temperatures below 17 degrees Celsius, we can do so by adjusting the Objectives inputs. Note: Here we set urban land cover to 0, therefore the other two land type weights must equal 1. We evenly weigh them as 0.5 and 0.5. 
+If we then consider solutions that only place value on agricultural and natural surrounding landscape types, and those with upstream temperatures below 17 degrees Celsius, we can do so by adjusting the Objectives inputs. Note: Here we set urban land cover to 0, therefore the other two land type weights must equal 1. We evenly weigh them as 0.5 and 0.5. We also adjust the slider bar such that 17 is the maximum value in 
+the temperature range.
 
 <p align="center">
 
@@ -758,20 +723,17 @@ We now see that with those constraints much less habitat overall is open up and 
 
 ::: columns
 ::: {.column width="55%"}
-The Custom feature on Upstream allows for detailed habitat restoration
-planning. It enables users to select specific culverts by ID, in
-addition to setting budget, project area, and ownership types. This
-feature is ideal for targeted restoration efforts.
-
+The Custom feature in Upstream allows users to explore the results from a customized 
+portfolio of barrier corrections. 
+    
 ------------------------------------------------------------------------
 
 #### **Getting Started**
 
 To use Custom, start by choosing your project area, budget, and culvert
 ownership types, similar to the Suggest feature. The unique aspect here
-is selecting specific culverts by their IDs for a more focused approach.
-The Custom feature then generates a report detailing habitat gains by
-salmon species and overall, along with the estimated cost of the plan.
+is the ability to select culverts to include in a restoration plan, 
+by their WDFW site IDs. The Custom feature then generates a map and report detailing habitat gains from the customized plan, by salmon species and habitat type, along with the estimated cost of the plan.
 :::
 
 ::: {.column width="5%"}
@@ -788,24 +750,18 @@ salmon species and overall, along with the estimated cost of the plan.
 
 ::: columns
 ::: {.column width="65%"}
-As in the Explore and Suggest feature, we can refine culverts based on Area, Subarea, and
-Ownership setting the benefit of any culvert outside the selection to zero.
-Note that a culvert outside the selected area, subarea or ownership
-could still end up in the suggested solution. This will happen if
-restoring culverts outside of the selection is required to achieve the
-greatest benefit within the solution. The tool will point this out.
+As in the Explore and Suggest feature, we can refine culverts based on Area, Subarea, and Ownership to filter out the culvert site IDs of interest, which then become
+project alternatives for your customized plan.
 
 *Area*
 
 To refine the inventory data, use the dropdown menu to select Water
-Resource Inventory Areas (WRIAs) of interest. For multiple selections,
-ensure 'All WRIAs' is deselected. Similarly, selecting specific
-ownership types will filter the maps and figures accordingly.
+Resource Inventory Areas (WRIAs) of interest,
+making sure 'All WRIAs' is deselected. 
 
 *Subarea*
 
-The Subarea selector allows for further specification and will auto
-populate with subareas contained within the selected Areas.
+The Subarea selector allows for further spatial refinement, based on HUC12(s), and will auto-populate with subareas contained within the selected WRIA(s).
 
 *Ownership*
 
@@ -813,6 +769,7 @@ The Ownership selector filters the culverts based on their ownership as
 defined in the WDFW inventory. This includes City, County, Federal,
 Private, State, Tribal, Other, Port, Drainage District, Irrigation
 District, and Unknown.
+
 :::
 
 ::: {.column width="5%"}
@@ -827,8 +784,7 @@ District, and Unknown.
 
 #### **Habitat Quantity Definition**
 
-As in the other features, habitat quantity can be quantified in terms of length, area, or volume. By default,
-length is used as the primary measure.
+As in the other features, habitat quantity can be quantified in terms of length, area, or volume. By default, length is used as the primary measure.
 
 ![](images/suggest_hab_select.jpg){style="width: 30%; display: block; margin-left: auto; margin-right: auto;"}
 
@@ -840,18 +796,13 @@ utilized as outlined in [Bieger et al.
 
 #### **Cost**
 
-As in the Suggest feature, users have the flexibility to input
-specific financial details for their projects. This feature is
-particularly useful for those who have precise cost information at their
+In the Cost option of Custom, users can provide financial parameters. This feature is
+particularly useful for those who have good cost estimates at their
 disposal.
 
 -   **Default Modelled Cost Estimates:** For users without specific cost
     data, Upstream offers a default option that utilizes modeled cost
-    estimates. These estimates are based on a comprehensive analysis of
-    regional data and provide a reliable approximation for project
-    budgeting. The modeled estimates are continually updated to reflect
-    current economic conditions and provide a robust starting point for
-    users who do not have access to specific cost data.
+    estimates. These predicted cost were modled from regional data. They only include       construction costs.
 
 Specifically, our default cost estimates were predicted from the model
 described in [**Van Deynze et al
@@ -860,6 +811,7 @@ As predictions were made in 2019, we have adjusted the predictions for
 inflation to the year of the last Upstream release date. Further unknown
 costs are spatially interpolated using **inverse distance weighting
 (IDW)**.
+
 
 <img src="images/suggest_cost.jpg" style="width: 50%; display: block; margin-left: auto; margin-right: auto;"/>
 
@@ -880,19 +832,18 @@ by 2.
 
 ::: columns
 ::: {.column width="55%"}
-Again, the 'Select Projects to Ignore' field allows users to
-input the IDs of culverts that have either been recently completed (but
-whose corrected status is not yet reflected in the app's data) or are
-already planned and budgeted for repair separately. When you include
-these culverts, the analysis will not allocate any of your budget
-towards them. Instead, it will assume they are already fixed and
-passable, allowing the tool to suggest additional barriers for repair
-within your remaining budget.
+As in Suggest, the 'Select Projects to Ignore' field allows users to
+input the WDFW site IDs of culverts that have either been recently completed (but
+whose corrected status is not yet reflected in the app's data), are
+already planned and budgeted for repair separately, or that you believe are incorrectly
+matched to a stream in the NHDPlus dataset. 
+
+When you select [a] project(s) to ignore, the analysis will not allocate any of your budget towards them. Instead, it will assume they are already fixed and/or
+passable, allowing the tool to allocate your budget to other project alternatives.
 
 The culverts marked as 'Select Projects to Ignore' will be
 excluded from the estimated cost and habitat gains of a suggested plan,
-but their associated habitat will still be displayed on the map for
-informational purposes as tan.
+but the culvert(s) and its (their) marginal upstream habitat will displayed on the map for informational purposes in a tan color.
 :::
 
 ::: {.column width="5%"}
@@ -907,7 +858,8 @@ informational purposes as tan.
 
 #### **Enter ID(s) for Your Custom Plan**
 
-This is the field that allows you to enter culverts based on their IDs to view the estimated costs as well as the benefits. If you provided any constraints in the above fields, the culvert IDs will reflect them. Note: You must provide at least 1 culvert ID to generate an output within the Custom feature. 
+This is the field that allows you to enter culvert site IDs to be included in your
+customized plan. If you provided any constraints in the above fields, the culvert IDs will reflect them. Note: You must provide at least 1 culvert ID to generate an output within the Custom feature. 
 
 ![](images/custom_enter_id.jpg)
 
@@ -915,7 +867,7 @@ This is the field that allows you to enter culverts based on their IDs to view t
 
 #### **Remove Bad Matches**
 
-The default selection is to remove bad matches, however, in this section the user can include bad matches in the data. Bad matches are those that were identified as not likely associated with an NHD line. More info can be found in the Learn section of this manual. 
+The default selection is to filter out bad matches, however, in the user can choose to include bad matches in the data used to generate plots. Bad matches are those that were identified as not likely associated with a streamline in the NHDPlus HR dataset. More info can be found in the Learn section of this manual. 
 
 ![](images/explore_bad_matches.jpg)
 
@@ -924,7 +876,7 @@ The default selection is to remove bad matches, however, in this section the use
 #### **Demo**
 
 Like in the Explore and Suggest tabs, we will use Kennedy - Goldsborough
-as our selected area considering all HUC 12s and ownership types. We will provide the Mean Design & Permitting Cost and the Mean Construction Cost as $500,000 and the ID for the culvert will be 115 MC097, which we enter in the Enter ID(s) for Your Custom Plan field. 
+as our selected area considering all HUC 12s and ownership types. We will define a Mean Design & Permitting Cost and a Mean Construction Cost of $500,000 and the ID for the culvert will be 115 MC097, which we enter in the Enter ID(s) for Your Custom Plan field. 
 
 <p align="center">
 
@@ -933,10 +885,10 @@ as our selected area considering all HUC 12s and ownership types. We will provid
 </p>
 
 We now generate a map when we click submit that highlights our planned
-culvert in blue showing their location and the habitat that they open
-up. Since there is a downstream barrier, none of the habitat above the selected culvert appears blue as it is not opened up with this project alone. 
+culvert in blue showing their location. The habitat that unlocked by the plan will
+be shown in dark blue. Since there is a downstream barrier, none of the stream lines above the selected culvert appear in dark blue.
 
-However, if we know that the downstream culvert is already being corrected and will not need to be funded directly by our project, we can add it to the Select Projects to Ignore field. In this example, we will add 115 MC040 to the Select Projects to Ignore. Now we see in the solution that the habitat above our culvert is now considered accessible by being marked blue with the below habitat as tan. 
+However, if we know that the downstream culvert is already being corrected and will not need to be funded directly by our project, we can add it to the Select Projects to Ignore field. In this example, we will add 115 MC040 to the Select Projects to Ignore. Now we see that the habitat above our culvert is now considered to be unlocked by the plan (shown in dark blue) by being marked blue, with the stream lines blocked by our ignored project displayed in a tan color. 
 
 <p align="center">
 
@@ -960,16 +912,8 @@ However, if we know that the downstream culvert is already being corrected and w
 ::: columns
 ::: {.column width="55%"}
 The Learn feature contains links to this manual as well as additional
-about the app.
+information about the app. In addition to this user manual, you can view the recording of the [Upstream launch webinar](https://vimeo.com/907552408?share=copy). 
 
-------------------------------------------------------------------------
-
-#### **Getting Started**
-
-To complement this user manual, we are developing a video tutorial that
-will provide a visual and interactive guide to Upstream. Your feedback
-is invaluable to us, so please don't hesitate to reach out with
-suggestions or questions to further enrich your learning experience.
 :::
 
 ::: {.column width="5%"}
@@ -982,89 +926,27 @@ suggestions or questions to further enrich your learning experience.
 
 ------------------------------------------------------------------------
 
+#### **Get in Touch**
+
+We would love to hear from you. Please reach out with questions or suggestions.
+
+You can also report issues to help improve Upstream. To do so, you can email the project team directly using the Contact Us button on the Welcome tab of this manual, or visit [GitHub Issues](https://github.com/sljardine/upstream/issues) page to report the issue. You will need to create a GitHub account, but this platform can be used to track bugs in the software along with their fixes.
+
+------------------------------------------------------------------------
+
 #### **Development Process**
 
-Upstream has been developed through a collaborative process involving
-state, tribal, and federal stakeholders, facilitated by a series of
-meeting groups. This ongoing engagement ensures the tool evolves with
-diverse inputs, reflecting a range of perspectives and needs. We
-continue to refine the tool, valuing the contributions from all
-participants.
+The concept for Upstream was developed by a team of researchers at the University of Washington, the Northwest Fisheries Science Center, the United States Geological Survey, and the Washington Department of Fish and Wildlife.
+
+Our team was guided by a Scientific Advisory Committee including members from the
+Washington Department of Fish and Wildlife, the Squaxin Island Tribe, the Tulalip Tribes, and King, Pierce, Snohomish, and Whatcom counties.
+
+Additionally, during the development process we received public input at a virtual
+workshop held in June of 2022.
 
 ------------------------------------------------------------------------
 
-#### **Bad Matches**
-
-Some culverts are well beyond a distance that allows them to be linked
-to any NHD line. We developed a machine learning solution considering lidar burn-in
-lines to help establish which culverts are beyond a confident match with a stream line. 
-
-Read more here: [View PDF](CulvertClassificationRandomForestModel_20240119_NRSIG.pdf)
-
-------------------------------------------------------------------------
-
-#### **Frequently Asked Questions (FAQ)**
-
-**Q1: What is Upstream?**
-
-A1: Upstream is an R Shiny application designed for barrier culvert
-restoration planning in Western Washington. It offers tools to
-visualize, plan, and optimize restoration projects.
-
-**Q2: Who can benefit from using Upstream?**
-
-A2: Upstream is beneficial for environmental planners, ecologists,
-government agencies, and anyone involved in habitat restoration and
-environmental conservation, particularly in the context of barrier
-culverts.
-
-**Q3: How do I access Upstream?**
-
-A3: Upstream can be accessed online at [Upstream's
-website](https://upstream-cloud-run-jcypjvvn7a-uw.a.run.app/). It's a
-web-based application, so no download is necessary although it is
-available as the application is packaged.
-
-**Q4: What are the main features of Upstream?**
-
-A4: Upstream includes several key features: Explore, Suggest, Custom,
-and Learn. Each offers different functionalities for data visualization,
-restoration planning, and educational resources.
-
-**Q5: How does the Explore feature work?**
-
-A5: The Explore feature allows users to visualize and analyze culvert
-attributes across different administrative and hydrological boundaries,
-providing insights into potential restoration areas while taking into
-account connectivity.
-
-**Q6: What is the Suggest feature?**
-
-A6: The Suggest feature generates tailored restoration plans based on
-user-defined constraints, such as budget and project area, maximizing
-habitat restoration impact.
-
-**Q7: Can I create a custom restoration plan with Upstream?**
-
-A7: Yes, the Custom feature enables users to select specific culverts
-and set parameters like budget and project area for targeted restoration
-planning.
-
-**Q8: Are there any resources for learning how to use Upstream?**
-
-A8: The Learn feature provides comprehensive resources, including
-detailed background information, development insights, and a forthcoming
-video tutorial.
-
-**Q9: Is there any support available for Upstream users?**
-
-A9: Users can reach out via the contact information provided on the
-Upstream website for support, feedback, or any queries related to the
-application.
-
-------------------------------------------------------------------------
-
-#### **Project Team**
+#### **Core Project Team**
 
 -   Sunny Jardine (Project lead, Lead developer)
 
@@ -1086,35 +968,6 @@ application.
 
 -   Zephyr Pfotenhauer (Illustrator)
 
-------------------------------------------------------------------------
-
-#### **Additional Information**
-
-In the realm of fish barrier culvert management and prioritization, a
-wealth of resources and methodologies exist to guide decision-making
-processes. Two key resources provide invaluable insights into these
-practices:
-
-1.  **WDFW Fish Passage Inventory, Assessment, and Prioritization
-    Manual**: This comprehensive manual, developed by the Washington
-    Department of Fish and Wildlife (WDFW), outlines detailed schemes
-    for prioritizing fish barrier culverts. It serves as a critical
-    guide for understanding the criteria and processes involved in
-    assessing and prioritizing culvert projects for fish passage
-    restoration. The manual can be accessed
-    [here](https://wdfw.wa.gov/sites/default/files/publications/02061/Fish%20Passage%20Inventory%2C%20Assessment%2C%20and%20Prioritization%20Manual.pdf).
-    It is an essential read for anyone involved in fish passage
-    improvement projects, offering a structured approach to prioritizing
-    interventions based on ecological and logistical considerations.
-
-2.  **Approaches to Prioritization in the Case Area**: A manuscript
-    available on bioRxiv
-    [here](https://www.biorxiv.org/content/10.1101/2022.11.07.515553v1)
-    provides a detailed analysis of different entities' approaches to
-    prioritization within the case area. This paper offers a comparative
-    perspective, highlighting the diverse methodologies and strategies
-    employed by various organizations in addressing fish passage
-    barriers.
 
 ------------------------------------------------------------------------
 
@@ -1134,6 +987,10 @@ up-to-date information. Below is a list of these sources, detailing
 their specific contributions to our app.
 
 ------------------------------------------------------------------------
+
+#### **Key Data Inputs**
+
+Our analysis draws from four primary datasets: the [United States Geological Survey's (USGS) National Hydrography Dataset plus attributes (NHDPlus) in high resolution (NHDPlus HR)](https://www.usgs.gov/national-hydrography/nhdplus-high-resolution), the [USGS NHDPlus Version 2 (NHD V2)](https://www.epa.gov/waterdata/get-nhdplus-national-hydrography-dataset-plus-data), the [Washington Department of Fish and Wildlife's Fish Passage Barriers Inventory](https://wdfw.wa.gov/species-habitats/habitat-recovery/fish-passage/assessment), and the [National Land Cover Database (NLCD)](https://www.mrlc.gov/data/nlcd-2021-land-cover-conus). From these datasets, we calculate the total length (km), area (km^2), and volume (km^3) of habitat upstream of each barrier, the habitat quantity from each barrier to the next upstream barrier(s), the quantity-weighted mean August stream temperature, and land cover within a 100 meter buffer of the upstream NHDPlus HR streams, classified as natural, agriculture, and urban. More information about these datasets, and their use in Upstream, is provided in the list below.
 
 **Culvert (Points) Data**
 
@@ -1203,7 +1060,6 @@ their specific contributions to our app.
 :::
 :::
 
-------------------------------------------------------------------------
 
 **Streams (Lines) Data**
 
@@ -1240,23 +1096,12 @@ their specific contributions to our app.
 :::
 :::
 
-**Note on Accuracy and Ongoing Work:** While NHDPlus HR offers detailed
-and extensive hydrographic data, it's important to acknowledge that
-these stream lines may not always perfectly represent on-ground
-realities. To enhance accuracy, ongoing work is exploring the
-integration of LiDAR-derived stream lines. LiDAR technology, known for
-its precision in topographical mapping, can provide more accurate
-representations of stream paths by incorporating elevation data. This
-effort is part of our continuous commitment to improving data quality
-and reliability.
-
-------------------------------------------------------------------------
 
 **Temperature and Land Use Data**
 
 ::: columns
 ::: {.column width="55%"}
--   Temperature data utilized in our application are derived from the
+1.   Temperature data utilized in our application are derived from the
     NHDPlusV2 dataset as the August Mean Temperatures in Celsius. The
     choice of August data is strategic, as it likely represents the
     maximum average monthly temperatures that anadromous species might
@@ -1270,7 +1115,7 @@ and reliability.
     Distance Weighting (IDW) interpolation, with a maximum neighbor
     count of 10, incorporating the bankfull width of water bodies.
 
--   Land use data is derived from the [National Landcover
+2.   Land use data is derived from the [National Landcover
     Dataset](https://www.mrlc.gov/data), specifically the 2021 version,
     offering insights into the surrounding environments of habitats.
     These land types, following the [Anderson Land Cover Classification
@@ -1323,24 +1168,22 @@ and reliability.
 :::
 :::
 
-------------------------------------------------------------------------
 
 **Cost Estimates**
 
-1.  [**Van Deynze et al
+-   [**Van Deynze et al
     2022**](https://www.sciencedirect.com/science/article/abs/pii/S0006320722002634)**:**
 
     -   Provides modelled cost estimates for project planning. These
         costs were originally estimated in 2019 USD, however, costs are
         adjusted for inflation during the data compilation process.
 
-------------------------------------------------------------------------
 
 **Legal Boundaries**
 
 ::: columns
 ::: {.column width="35%"}
-1.  [**Injunction
+-   [**Injunction
     Boundary**](https://geo.wa.gov/datasets/fe5bc6ad319144478326336b04ab619f/about)**:**
 
     -   Outlines the case area for U.S. District Court Injunction No.
@@ -1354,6 +1197,60 @@ and reliability.
 ![](images/case_area.jpg)
 :::
 :::
+
+------------------------------------------------------------------------
+
+#### **Bad Matches**
+
+The primary hydrography layer in Upstream is the [USGS NHDPlus HR dataset](https://www.usgs.gov/national-hydrography/nhdplus-high-resolution), which is
+the most detailed national hydrography layer. However, some culverts are not well matched to stream lines in the NHDPlus HR dataset. This is a challenge, as bad matches
+will affect our estimates of habitat quantity and connectivity between culverts in the sytem. 
+
+In an attempt to address bad matches, we developed an auxillary predictive model to determine whether a barrier is a ``good match'' to its closest NHDPlus HR stream.
+
+In addition to the key data inputs described above, we utlized data on lidar-derived streamlines, generated from the [USGS 10 meter digital elevation model dataset](https://data.usgs.gov/datacatalog/data/USGS:3a81321b-c153-416f-98b7-cc8e5f0e17c3) and a geospatial roads layer.
+
+With these inputs, we assemble a dataset for each barrier including measures of distances and directions to the nearest streams and roads, the similarities of these distances and directions, estimates of the similarity of the NHDPlus HR and lidar stream locations, whether or not stream names in the WDFW inventory are the same as the stream name from the NHDPlus HR dataset, total culvert cross-sectional area, scraped from WDFW's culvert reports, and stream flow rates from the matched NHDPlus HR stream segment.
+
+We then construct a random forest model to predict whether or not each culvert is a good match to its closest NHDPlus HR dataset stream. The random forest model was trained by manually classifying a randomly selected subset of 301 culverts. The model F1-Scores for the validation data were 0.91 for good matches, and 0.94 for bad matches. The model classifies 73.5% of barriers as well matched to their NHDPlus HR stream line, which we include in this analysis.
+
+Read more here: [View PDF](CulvertClassificationRandomForestModel_20240119_NRSIG.pdf)
+
+Future work matching barrier culverts to a networked hydrography layer is important for fish passage planning in Washington.
+
+
+
+
+------------------------------------------------------------------------
+
+#### **Additional Resources**
+
+In the realm of fish barrier culvert management and prioritization, a
+wealth of resources and methodologies exist to guide decision-making
+processes. Two key resources provide invaluable insights into these
+practices:
+
+1.  **WDFW Fish Passage Inventory, Assessment, and Prioritization
+    Manual**: This comprehensive manual, developed by the Washington
+    Department of Fish and Wildlife (WDFW), outlines detailed schemes
+    for prioritizing fish barrier culverts. It serves as a critical
+    guide for understanding the criteria and processes involved in
+    assessing and prioritizing culvert projects for fish passage
+    restoration. The manual can be accessed
+    [here](https://wdfw.wa.gov/sites/default/files/publications/02061/Fish%20Passage%20Inventory%2C%20Assessment%2C%20and%20Prioritization%20Manual.pdf).
+    It is an essential read for anyone involved in fish passage
+    improvement projects, offering a structured approach to prioritizing
+    interventions based on ecological and logistical considerations.
+
+2.  **Approaches to Prioritization in the Case Area**: A manuscript
+    available on bioRxiv
+    [here](https://www.biorxiv.org/content/10.1101/2022.11.07.515553v1)
+    provides a detailed analysis of different entities' approaches to
+    prioritization within the case area. This paper offers a comparative
+    perspective, highlighting the diverse methodologies and strategies
+    employed by various organizations in addressing fish passage
+    barriers.
+
 
 ------------------------------------------------------------------------
 
